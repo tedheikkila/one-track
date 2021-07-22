@@ -3,6 +3,7 @@ browse the best songs. develop your own personal music library
 
 ## Table of Contents
 
+  - [Team](#team)
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
@@ -13,6 +14,10 @@ browse the best songs. develop your own personal music library
   - [Demo](#demo)
   - [Screenshots](#screenshots)
 
+   ## Team
+
+  Dev Team #1: Matt R., Mohamed A., Cortland S-B., Ted H.
+  
   ## Description
 
   What is this app and what does it do:
