@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS onetrack_db;
+CREATE DATABASE onetrack_db;
