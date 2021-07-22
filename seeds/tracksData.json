@@ -1,0 +1,33 @@
+[
+  {
+    "title": "Imagine Dragons",
+    "artist": "thunder",
+    "filename": "imaginedragons-albumcover.jpg"
+
+  },
+  {
+    "title": "Lose Yourself",
+    "artist": "Eminem",
+    "filename": "eminem-albumcover.jpg"
+
+  },
+  {
+    "title": "Revolution",
+    "artist": "The Beatles",
+    "filename": "beatles-albumcover.jpg"
+
+  },
+  {
+    "title": "Immigrant Song",
+    "artist": "Led Zeppelin",
+    "filename": "lz-albumcover.jpg"
+
+  },
+  {
+    "title": "Style",
+    "artist": "Taylor Swift",
+    "filename": "ts-albumcover.jpg"
+
+  }
+
+]

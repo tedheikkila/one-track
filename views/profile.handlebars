@@ -6,15 +6,15 @@
 
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Create New Blog:</h3>
+    <h3>Create New Library:</h3>
 
     <form class="form new-blog-form">
       <div class="form-group">
-        <label for="blog-name">tech-blog name:</label>
+        <label for="blog-name">track name:</label>
         <input class="form-input" type="text" id="blog-name" name="blog-name" />
       </div>
       <div class="form-group">
-        <label for="blog-desc">description:</label>
+        <label for="blog-desc">artist:</label>
         <textarea class="form-input" id="blog-desc" name="blog-desc"></textarea>
       </div>
       <div class="form-group">
@@ -23,17 +23,17 @@
     </form>
   </div>
 
-  {{#if blogs.length}}
+  {{#if tracks.length}}
   <div class="col-md-6 project-list">
-    <h3>Current Blogs:</h3>
+    <h3>Current Tracks:</h3>
 
-    {{#each blogs as |blog|}}
+    {{#each tracks as |track|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/blog/{{blog.id}}">{{blog.name}}</a></h4>
+        <h4><a href="/blog/{{track.id}}">{{track.name}}</a></h4>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{blog.id}}">DELETE</button>
+        <button class="btn btn-sm btn-danger" data-id="{{track.id}}">DELETE</button>
       </div>
     </div>
     {{/each}}
