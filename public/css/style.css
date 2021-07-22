@@ -2,10 +2,6 @@ header, .blog:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
-body {
-  background-color: black;
-}
-
 .no-button {
   background: none;
   border: none;
@@ -21,14 +17,6 @@ body {
   text-decoration: underline;
 }
 
-#nav-menu {
-  background-color: white;
-}
-
-#nav-a {
-  color: black
-}
-
 .container {
   width:50%;
 }
@@ -38,5 +26,5 @@ body {
 }
 
 #jumbo-2 {
-  background-color: rgb(78, 230, 230)
+  background-color: rgb(81, 216, 216)
 }
