@@ -4,22 +4,8 @@
 
 body {
   font-family: 'Croissant One', cursive;
+  background-color: gainsboro;
 }
-
-/* .no-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
-}
-
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
-} */
 
 #header-nav {
   background-color: black;
@@ -28,7 +14,7 @@ body {
 }
 
 .one-track-nav {
-  margin-left: 100px;
+  margin-left: 50px;
   color: white;
 }
 
@@ -38,13 +24,13 @@ body {
 }
 
 .log-in-nav {
-  margin-right: 100px;
+  margin-right: 50px;
   font-size: 30px;
   color: white
 }
 
 .log-in-nav:hover {
-  color:rgb(81, 216, 216);
+  color:rgb(238, 113, 227);
   text-decoration: none;
 }
 
@@ -77,7 +63,7 @@ body {
 }
 
 #log-in:hover {
-  color: rgb(81, 216, 216)
+  color: rgb(238, 113, 227)
 }
 
 #sign-up:hover {
@@ -93,16 +79,14 @@ body {
   position: relative;
 }
 
-.form {
-  font-size: 15px;
+#submit-search {
+  background-color: black;
+  font-size: 20px;
+  border: none
 }
 
-.form-input {
-  font-size: 15px
-}
-
-option {
-  font-size: 15px
+#submit-search:hover {
+  color:rgb(81, 216, 216)
 }
 
 #jumbo-3 {
@@ -111,12 +95,6 @@ option {
   color: white;
   border: solid 5px rgb(238, 113, 227)
 }
-
-@media screen and (max-width: 900px) {
-  #jumbo-2 {
-    display: none;
-  }
-} 
 
 /* footer */
 footer {
@@ -141,3 +119,23 @@ footer {
   margin-left: 50px
 }
 
+/* .no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #1b89bc;
+  text-decoration: none;
+  font-size: 100%;
+}
+
+.no-button:hover {
+  color: #065b83;
+  text-decoration: underline;
+} */
+
+@media screen and (max-width: 900px) {
+  #jumbo-2 {
+    display: none;
+  }
+} 
