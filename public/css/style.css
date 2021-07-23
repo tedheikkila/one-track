@@ -57,6 +57,7 @@ body {
 .jumbotron {
   margin: 3%;
   border: solid black 5px; 
+  border-radius: 20px;
 }
 
 #jumbo-1 {
@@ -90,6 +91,18 @@ body {
 #jumbo-2 {
   background-color: rgb(81, 216, 216);
   position: relative;
+}
+
+.form {
+  font-size: 15px;
+}
+
+.form-input {
+  font-size: 15px
+}
+
+option {
+  font-size: 15px
 }
 
 #jumbo-3 {
