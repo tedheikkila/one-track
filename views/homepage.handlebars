@@ -1,15 +1,33 @@
-<!-- Loop over each object in the projects array -->
-{{#each tracks as |track| }}
-<div class="row mb-4 blog">
-  <div class="col-md-5">
-    <h2>    
-      <a href="/tracks/{{track.id}}">{{track.title}}</a>
-    </h2>
+<div class="container">
+  <div class="container-1">
+    <div style="margin-top: 80px;" class="jumbotron text-center" id="jumbo-1">
+      <h1 class="display-4">One Track <span role="img" aria-label="Memo">&#9856;</span></h1>
+      <div class="input">
+        <input type="email" class="form-control" id="email" placeholder="Email" aria-label=""
+          aria-describedby="basic-addon1">
+        <input type="password" class="form-control" id="password" placeholder="Password" aria-label=""
+          aria-describedby="basic-addon1">
+        <a class="btn btn-primary btn-lg mt-4" href="/" role="button" id="log-in">Log In</a>
+      </div>
+    </div>
   </div>
-  <div class="col-md-7">
-    <p>
-      {{track.artist}}
-    </p>
+  <div class="container-2">
+    <div style="margin-top: 80px;" class="jumbotron text-center" id="jumbo-2">
+      <h1 class="display-4">Search <span role="img" aria-label="Memo">&#9782;</span></h1>
+    </div>
+  </div>
+  <div class="container-3">
+    <div style="margin-top: 80px;" class="jumbotron text-center" id="jumbo-3">
+      <h1 class="display-4">Trending <span role="img" aria-label="Memo">&#10064;</span></h1>
+    </div>
   </div>
 </div>
-{{/each}}
+
+
+<!--jQuery min-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--bootstrap min and popper-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="/js/index.js"></script>
+
