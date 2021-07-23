@@ -15,6 +15,16 @@
   <div class="container-2">
     <div style="margin-top: 80px;" class="jumbotron text-center" id="jumbo-2">
       <h1 class="display-4">Search <span role="img" aria-label="Memo">&#9782;</span></h1>
+      <form id="search-form" class="form">
+        <select id="format-input" class="form-input">
+          <option value="" disabled selected>Select an option</option>
+          <option value="Songs">Song</option>
+          <option value="Artist">Artist</option>
+          <option value="Genre">Genre</option>
+        </select>
+        <input id="search-input" class="form-input w-100" type="text" placeholder="Lose Yourself, Beck, R&B">
+        <button class="btn btn-info btn-block">Submit</button>
+      </form>
     </div>
   </div>
   <div class="container-3">
