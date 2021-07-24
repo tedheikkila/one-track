@@ -134,6 +134,7 @@ body {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
   background-color: rgb(81, 216, 216);
+  width: 75%;
 }
 
 .list-container {
@@ -150,7 +151,6 @@ body {
 
 .list-item-title {
   display: inline-block;
-  width: 75%;
 }
 
 .list-container i {
@@ -168,6 +168,15 @@ body {
   border-right: none;
   padding: 20px;
   cursor: pointer;
+}
+
+.table {
+  margin-left: -16.5%;
+  width: 118%;
+}
+
+.library-thead {
+  background-color: white;
 }
 
 @media screen and (max-width: 1000px) {

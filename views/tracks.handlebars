@@ -1,21 +1,39 @@
- 
- 
- <div class="container-fluid">
+<div class="container-fluid">
     <div class="row">
-      <div class="col-4 list-container">
-        <div class="card">
-          <ul class="list-group"></ul>
+        <div class="col-4 list-container">
+            <div class="card">
+                <ul class="list-group"></ul>
+            </div>
         </div>
-      </div>
-      <div class="col-8">
-          
-      </div>
+        <div class="col-8">
+            <!-- Table from Spotify api call goes here -->
+            <table class="table table-hover">
+                <thead class="library-thead">
+                    <tr>
+                        <th>Name</th>
+                        <th>Artist</th>
+                        <th>Album</th>
+                        <th>Genre</th>
+                        <th>Save</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Wow</th>
+                        <td>Beck</td>
+                        <td>Colors</td>
+                        <td>Indie Rock</td>
+                        <td><button>+1</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Without Me</th>
+                        <td>Eminem</td>
+                        <td>The Eminem Show</td>
+                        <td>Rap</td>
+                        <td><button>+1</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-  </div>
-
-
-
-
- 
-
-
+</div>
