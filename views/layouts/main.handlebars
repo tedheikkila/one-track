@@ -13,37 +13,37 @@
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2" id="header-nav">
-      <h1>
-        <a href="/" class="one-track-nav">One Track</a>
-      </h1>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">Profile</a> |
-        <button class="no-button" id="logout">Logout</button>
-        {{else}}
-        <a href="/login" class="log-in-nav">Login</a>
-        <a href="/tracks" class="tracks-nav">Tracks Library</a>
-        {{/if}}
-      </nav>
-    </header>
-    <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
-      {{{ body }}}
-    </main>
-
-    <footer>
-      <p class="copyrights">One Track @ 2021 <span class="api">3P API: Deezer</span></p>
-    </footer>
-  
-  </div>
+  <header class="display-flex justify-space-between align-center p-2" id="header-nav">
+    <h1>
+      <a href="/" class="one-track-nav">One Track</a>
+    </h1>
+    <nav>
+      <!-- Conditionally render login or logout links -->
+      {{#if logged_in}}
+      <a href="/profile">Profile</a> |
+      <button class="no-button" id="logout">Logout</button>
+      <a href="/tracks" class="tracks-nav">Tracks Library</a>
+      {{else}}
+      <a href="/tracks" class="tracks-nav">Library</a>
+      <a href="/login" class="log-in-nav">Log In</a>
+      {{/if}}
+    </nav>
+  </header>
+    <!-- Render the sub layout -->
+    {{{ body }}}
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+
+  <!--jQuery min-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!--bootstrap min and popper-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="/js/index.js"></script>
+
 </body>
 
 </html>
