@@ -175,9 +175,29 @@ body {
   width: 118%;
 }
 
+tbody {
+  font-size: 15px;
+}
+
 .library-thead {
   background-color: white;
 }
+
+#plus-one-btn, #play-one-btn {
+  border-radius: 5px;
+}
+
+#play-one-btn:hover {
+  cursor: pointer;
+  background-color: rgb(238, 113, 227);
+}
+
+
+#plus-one-btn:hover {
+  cursor: pointer;
+  background-color: rgb(81, 216, 216);
+}
+
 
 @media screen and (max-width: 1000px) {
   .container {
@@ -192,6 +212,19 @@ body {
     margin-left: 5%;
   }
 } 
+
+@media screen and (max-width: 600px) {
+  .list-container .card {
+    display: none;
+  }
+} 
+
+@media screen and (max-width: 600px) {
+  .table {
+    margin-left: -60%;
+  }
+} 
+
 
 
 
