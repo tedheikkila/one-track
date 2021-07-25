@@ -96,6 +96,13 @@ body {
   margin-top: 75px;
 }
 
+#search-form-tracks {
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 90%;
+  font-size: 20px;
+}
+
 #submit-search {
   background-color: black;
   font-size: 20px;
@@ -111,10 +118,9 @@ body {
   position: relative;
   color: white;
   border: solid 5px rgb(238, 113, 227);
-  width: 98%;
+  width: 88%;
 }
 
-/* footer */
 .footer-home {
   background-color: black;
   width: 100%;
@@ -227,7 +233,6 @@ tbody {
 .log-out-nav:hover {
   color: rgb(238, 113, 227)
 }
-
 
 @media screen and (max-width: 1000px) {
   .container {

@@ -2,6 +2,16 @@
     <div class="row">
         <div class="col-4 list-container">
             <div class="card">
+                <form id="search-form-tracks" class="form">
+                    <select id="format-input" class="form-input">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="Songs">Song</option>
+                        <option value="Artist">Artist</option>
+                        <option value="Genre">Genre</option>
+                    </select>
+                    <input id="search-input" class="form-input w-100" type="text" placeholder="Royals, Beck, R&B">
+                    <button class="btn btn-info btn-block" id="submit-search">Submit</button>
+                </form>
                 <ul class="list-group">
                     <!-- Saved tracks get appended here -->
                 </ul>
