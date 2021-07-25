@@ -208,6 +208,24 @@ tbody {
   text-decoration: none;
 }
 
+.log-out-nav {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color:white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.log-out-nav:hover {
+  color: rgb(238, 113, 227)
+}
+
+
+
+
+
+
 @media screen and (max-width: 1000px) {
   .container {
     margin-right: 10%;
