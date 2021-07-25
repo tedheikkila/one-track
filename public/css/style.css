@@ -197,6 +197,17 @@ tbody {
   background-color: rgb(81, 216, 216);
 }
 
+.profile-nav {
+  color: white;
+  font-size: 20px;
+  padding-right: 80px;
+}
+
+.profile-nav:hover {
+  color:rgb(238, 113, 227);
+  text-decoration: none;
+}
+
 @media screen and (max-width: 1000px) {
   .container {
     margin-right: 10%;
@@ -212,6 +223,12 @@ tbody {
 } 
 
 @media screen and (max-width: 600px) {
+  .profile-nav, .log-in-nav, .tracks-nav {
+    font-size: 16px;
+  }
+} 
+
+@media screen and (max-width: 600px) {
   .list-container .card {
     display: none;
   }
@@ -222,5 +239,8 @@ tbody {
     margin-left: -60%;
   }
 } 
+
+
+
 
 
