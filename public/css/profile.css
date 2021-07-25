@@ -2,39 +2,69 @@
   box-sizing: border-box;
 }
 
+.profile-nav {
+  color: white;
+  font-size: 20px;
+  padding-right: 100px;
+}
+
+.profile-nav:hover {
+  color:rgb(238, 113, 227);
+  text-decoration: none;
+}
+
+.log-out-nav {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color:white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.log-out-nav:hover {
+  color: rgb(238, 113, 227)
+}
+
 body {
   font-family: 'Croissant One', cursive;
   background-color: gainsboro;
 }
 
+#profile-row {
+  margin-bottom: -5%;
+}
+
+#profile-container {
+  text-align: center;
+}
+
 .profile-name {
+  font-size: 30px;
   text-align: center;
   margin-top: 5%;
 }
 
-.profile-nav {
-    color: white;
-    font-size: 20px;
-    padding-right: 100px;
-  }
-  
-  .profile-nav:hover {
-    color:rgb(238, 113, 227);
-    text-decoration: none;
-  }
-  
-  .log-out-nav {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color:white;
-    text-decoration: none;
-    font-size: 20px;
-  }
-  
-  .log-out-nav:hover {
-    color: rgb(238, 113, 227)
-  }
+.profile-pic {
+  border-radius: 100px;
+}
+
+#profile-form {
+  width: 80%;
+  margin-left: 15%;
+}
+
+#profile-search {
+  background-color: black;
+  font-size: 20px;
+  border: none
+}
+
+#profile-search:hover {
+  color:rgb(81, 216, 216)
+}
+
+
 
 :root {
     --primary: black;
