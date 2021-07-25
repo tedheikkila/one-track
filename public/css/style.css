@@ -88,6 +88,12 @@ body {
 #jumbo-2 {
   background-color: rgb(81, 216, 216);
   position: relative;
+  height: 515px;
+  width: 100%;
+}
+
+#search-form {
+  margin-top: 75px;
 }
 
 #submit-search {
@@ -200,7 +206,7 @@ tbody {
 .profile-nav {
   color: white;
   font-size: 20px;
-  padding-right: 80px;
+  padding-right: 100px;
 }
 
 .profile-nav:hover {
@@ -241,7 +247,13 @@ tbody {
 } 
 
 @media screen and (max-width: 600px) {
-  .profile-nav, .log-in-nav, .tracks-nav {
+  .one-track-nav {
+    font-size: 25px;
+  }
+} 
+
+@media screen and (max-width: 600px) {
+  .profile-nav, .log-in-nav, .tracks-nav, .log-out-nav {
     font-size: 16px;
   }
 } 

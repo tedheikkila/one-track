@@ -15,7 +15,7 @@ body {
 .profile-nav {
     color: white;
     font-size: 20px;
-    padding-right: 80px;
+    padding-right: 100px;
   }
   
   .profile-nav:hover {
@@ -36,11 +36,10 @@ body {
     color: rgb(238, 113, 227)
   }
 
-
 :root {
-    --outer-space: black;
-    --gin: gainsboro;
-    --heliotrope: #e866ec;
+    --primary: black;
+    --secondary: rgb(238, 113, 227);
+    --background: gainsboro;
   }
 
   main {
@@ -48,7 +47,6 @@ body {
     margin: 2rem auto;
   }
   
-  /* create our main grid with flexbox, use negative margins to offset the padding on the .card-column class */
   .row {
     display: flex;
     flex-wrap: wrap;
@@ -61,26 +59,21 @@ body {
     justify-content: center;
   }
   
-  /* using a mobile-first approach, set base column width to be 100% and we'll update it using media queries for larger screen sizes */
   .card-column {
     flex: 1 0 100%;
     padding: 1.5rem;
-    /* when the screen resizes, make it so our columns don't jump in size */
     transition: flex-basis 500ms linear;
     margin-bottom: 1.5rem;
   }
   
-  /* make each code card a flexbox column to align and justify content within it */
   .code-card {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     min-height: 100%;
     padding: 2rem;
-    color: var(--heliotrope);
-  
-    /* outline is like border, but on the outside of the box instead of inside */
-    outline: 2px solid var(--outer-space);
+    color: var(--secondary);
+    outline: 2px solid var(--primary);
     outline-offset: -2px;
     transition: all 0.5s ease-in-out;
   }
@@ -89,16 +82,21 @@ body {
     position: relative;
     margin: -4rem 0 1.5rem 0;
     padding: 0.5rem 1rem;
-    background-color: var(--outer-space);
-    color: var(--heliotrope);
-    border: 2px solid var(--gin);
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: 2px solid var(--background);
     border-radius: 8px;
     transition: all 0.5s ease-in-out;
+    text-align: center;
   }
-  
-  /* each card's code block grows to the height of the largest code block on the page, making each card even in height */
+
   .code-card .code-block {
     flex-grow: 1;
+  }
+
+  #artist {
+    text-align: center;
+    color: black
   }
   
   .code-card pre {
@@ -106,36 +104,41 @@ body {
     overflow: auto;
     tab-size: 4;
     padding: 1.2rem 1rem;
-    color: var(--gin);
+    color: var(--background);
     border-radius: 8px;
     display: flex;
     align-items: center;
   }
   
-  /* on <pre> click, select all contents so the code is highlighted */
   .code-card pre:active {
     user-select: all;
   }
   
-  /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
   @media screen and (min-width: 768px) {
-    /* on tablets, set columns to only be 50% of the width and not grow */
     .card-column {
       flex: 0 0 50%;
       max-width: 50%;
     }
-  
-    /* select the last child to grow to full width if it has space to grow */
-    .card-column:last-child {
+      .card-column:last-child {
       flex-grow: 1;
     }
   }
   
-  /* media query for larger screens */
   @media screen and (min-width: 992px) {
-
     .card-column {
       flex: 0 0 33.333%;
       max-width: 33.333%;
     }
   }
+
+  @media screen and (max-width: 600px) {
+    .one-track-nav {
+      font-size: 25px;
+    }
+  } 
+  
+  @media screen and (max-width: 600px) {
+    .profile-nav, .log-in-nav, .tracks-nav, .log-out-nav {
+      font-size: 16px;
+    }
+  } 
