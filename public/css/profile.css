@@ -78,8 +78,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    min-height: 60%;
-    padding: 2rem;
+    min-height: 70%;
+    padding: 2.5rem;
     color: var(--secondary);
     border: 3px solid var(--primary);
     outline-offset: -2px;
