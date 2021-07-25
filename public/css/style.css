@@ -110,7 +110,8 @@ body {
   background-color: black;
   position: relative;
   color: white;
-  border: solid 5px rgb(238, 113, 227)
+  border: solid 5px rgb(238, 113, 227);
+  width: 98%;
 }
 
 /* footer */
@@ -226,10 +227,6 @@ tbody {
 .log-out-nav:hover {
   color: rgb(238, 113, 227)
 }
-
-
-
-
 
 
 @media screen and (max-width: 1000px) {

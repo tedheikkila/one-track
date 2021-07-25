@@ -44,7 +44,7 @@ body {
   }
 
   main {
-    width: 96%;
+    width: 95%;
     margin: 2rem auto;
   }
   
@@ -59,19 +59,26 @@ body {
   .justify-center {
     justify-content: center;
   }
+
+  figure {
+    height: 90%;
+  }
   
   .card-column {
     flex: 1 0 100%;
     padding: 1.5rem;
-    transition: flex-basis 500ms linear;
     margin-bottom: 1.5rem;
+  }
+
+  #card-figure {
+    text-align: center;
   }
   
   .code-card {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    min-height: 70%;
+    min-height: 60%;
     padding: 2rem;
     color: var(--secondary);
     border: 3px solid var(--primary);
@@ -95,16 +102,31 @@ body {
     flex-grow: 1;
   }
 
+  .card-body {
+    text-align: center
+  }
+
   #artist {
     text-align: center;
     color: black;
-    margin-top: 10px;
+    margin-top: 20px;
   }
 
   #album {
-    text-align: center;
-    margin-left: 12%;
-    margin-right: 12%;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+
+  #delete-track {
+    border: none;
+    margin-bottom: -6px;
+    background-color: var(--background);
+    color: rgb(238, 113, 227);
+    font-size: 20px;
+  }
+
+  #delete-track:hover {
+    color:rgb(81, 216, 216)
   }
   
   .code-card pre {
@@ -129,6 +151,13 @@ body {
     }
       .card-column:last-child {
       flex-grow: 1;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    #album {
+      margin-left: 18%;
+      margin-right: 18%;
     }
   }
   
