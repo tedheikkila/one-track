@@ -71,12 +71,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    min-height: 100%;
+    min-height: 70%;
     padding: 2rem;
     color: var(--secondary);
-    outline: 2px solid var(--tertiary);
+    border: 3px solid var(--primary);
     outline-offset: -2px;
     background-color: var(--background);
+    border-radius: 5px;
   }
   
   .code-card .card-header {
@@ -96,7 +97,14 @@ body {
 
   #artist {
     text-align: center;
-    color: black
+    color: black;
+    margin-top: 10px;
+  }
+
+  #album {
+    text-align: center;
+    margin-left: 12%;
+    margin-right: 12%;
   }
   
   .code-card pre {
@@ -109,7 +117,7 @@ body {
     display: flex;
     align-items: center;
   }
-  
+
   .code-card pre:active {
     user-select: all;
   }
@@ -140,5 +148,11 @@ body {
   @media screen and (max-width: 600px) {
     .profile-nav, .log-in-nav, .tracks-nav, .log-out-nav {
       font-size: 16px;
+    }
+  } 
+
+  @media screen and (max-width: 600px) {
+    #album {
+      margin-left: 25%;
     }
   } 
