@@ -83,15 +83,16 @@ body {
     color: var(--secondary);
     border: 3px solid var(--primary);
     outline-offset: -2px;
-    background-color: var(--background);
+    background-color: black;
+    opacity: 90%;
     border-radius: 5px;
   }
   
   .code-card .card-header {
     position: relative;
-    margin: -4rem 0 1.5rem 0;
+    margin: -1rem 0 0.5rem 0;
     padding: 0.5rem 1rem;
-    background-color: var(--primary);
+    background-color: black;
     color: white;
     border-radius: 5px;
     text-align: center;
@@ -108,19 +109,24 @@ body {
 
   #artist {
     text-align: center;
-    color: black;
+    color: white;
     margin-top: 20px;
   }
 
   #album {
     margin-top: 10px;
     border-radius: 10px;
+    filter: saturate(150%);
+  }
+  
+  #audio {
+    text-align: center;
+    width: 90%;
   }
 
   #delete-track {
     border: none;
-    margin-bottom: -6px;
-    background-color: var(--background);
+    background-color: black;
     color: rgb(238, 113, 227);
     font-size: 20px;
     font-weight: bold;
