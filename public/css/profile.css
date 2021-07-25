@@ -123,6 +123,7 @@ body {
     background-color: var(--background);
     color: rgb(238, 113, 227);
     font-size: 20px;
+    font-weight: bold;
   }
 
   #delete-track:hover {
