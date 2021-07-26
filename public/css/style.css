@@ -117,8 +117,60 @@ body {
   background-color: black;
   position: relative;
   color: white;
-  border: solid 5px rgb(238, 113, 227);
+  border: solid 5px white;
   width: 88%;
+  height: 90%;
+}
+
+#jumbo-4 {
+  background-color: white;
+  position: relative;
+  border: solid 5px black;
+  width: 125%;
+  height: 90%;
+  margin-left: -9%;
+}
+
+.mySlides1 {
+  display: none;
+  color: white
+}
+
+#home-images {
+  border-radius: 10px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px
+}
+
+.prev:hover {
+  background-color: rgb(238, 113, 227);
+}
+
+.next:hover {
+ background-color: rgb(81, 216, 216);
 }
 
 .footer-home {
