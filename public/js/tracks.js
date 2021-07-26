@@ -1,14 +1,14 @@
 let trackTitle;
-let trackRow;
+let trackData;
 let saveTrackBtn;
 let playTrackBtn;
 let trackList;
 
 if (window.location.pathname === '/tracks') {
   trackTitle = document.querySelector('.track-title');
-  trackRow = document.querySelector('.track-row');
-  saveTrackBtn = document.querySelector('.save-track');
-  playTrackBtn = document.querySelector('.play-track');
+  trackData = document.querySelector('.track-data');
+  saveTrackBtn = document.querySelector('#plus-one-btn');
+  playTrackBtn = document.querySelector('#play-one-btn');
   trackList = document.querySelectorAll('.list-container .list-group');
 }
 
@@ -55,21 +55,21 @@ const renderActiveTrack = () => {
 
   if (activeTrack.id) {
     trackTitle.setAttribute('readonly', true);
-    trackRow.setAttribute('readonly', true);
+    trackData.setAttribute('readonly', true);
     trackTitle.value = activeTrack.title;
-    trackRow.value = activeTrack.text;
+    trackData.value = activeTrack.text;
   } else {
     trackTitle.removeAttribute('readonly');
-    trackRow.removeAttribute('readonly');
+    trackData.removeAttribute('readonly');
     trackTitle.value = '';
-    trackRow.value = '';
+    trackData.value = '';
   }
 };
 
 const handleTrackSave = () => {
   const newTrack = {
     title: trackTitle.value,
-    text: trackRow.value,
+    text: trackData.value,
   };
   saveTrack(newTrack).then(() => {
     getAndRenderTracks();
@@ -109,7 +109,7 @@ const handleNewTrackView = (e) => {
 };
 
 const handleRenderSaveBtn = () => {
-  if (!trackTitle.value.trim() || !trackRow.value.trim()) {
+  if (!trackTitle.value.trim() || !trackData.value.trim()) {
     hide(saveTrackBtn);
   } else {
     show(saveTrackBtn);
@@ -177,7 +177,7 @@ if (window.location.pathname === '/tracks') {
   saveTrackBtn.addEventListener('click', handleTrackSave);
   playTrackBtn.addEventListener('click', handleNewTrackView);
   trackTitle.addEventListener('keyup', handleRenderSaveBtn);
-  trackRow.addEventListener('keyup', handleRenderSaveBtn);
+  trackData.addEventListener('keyup', handleRenderSaveBtn);
 }
 
 getAndRenderTracks();
