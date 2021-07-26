@@ -313,6 +313,18 @@ tbody {
 } 
 
 @media screen and (max-width: 600px) {
+  #jumbo-3 {
+    width: 95%;
+  }
+} 
+
+@media screen and (max-width: 600px) {
+  #jumbo-4 {
+    margin-left: 7%;
+  }
+} 
+
+@media screen and (max-width: 600px) {
   .list-container .card {
     display: none;
   }
