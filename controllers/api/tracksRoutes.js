@@ -1,17 +1,13 @@
 const router = require('express').Router();
+require('dotenv').config();
 
 const withAuth = require('../../utils/auth');
 const axios = require('axios');
 
 const querystring = require('querystring');
 
-
-
-
-var client_id = '1713901affcb498a956cc29a7f7f5880'; // Your client id
-var client_secret = '91a8194067164571b0698dbafcbfb044'; // Your secret
-
-
+var client_id = process.env.client_id; // Your client id
+var client_secret = process.env.client_secret // Your secret
 
 const spotifyAuth = async () => {
   try {
@@ -25,11 +21,8 @@ const spotifyAuth = async () => {
     console.log(error);
   }
   
-   
 }
-
-
-
+ 
 router.post('/', async (req, res) => {
   let token = await spotifyAuth();
   
@@ -56,4 +49,3 @@ router.post('/toptracks', async (req, res) => {
 })
 
 module.exports = router;
-

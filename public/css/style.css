@@ -97,19 +97,19 @@ body {
 }
 
 #search-form-tracks {
-  margin-top: 5%;
+  margin-top: 10%;
   margin-left: 5%;
   width: 90%;
   font-size: 20px;
 }
 
-#submit-search {
+#searchBtn {
   background-color: black;
   font-size: 20px;
   border: none
 }
 
-#submit-search:hover {
+#searchBtn:hover {
   color:rgb(81, 216, 216)
 }
 
@@ -194,7 +194,7 @@ body {
 }
 
 .list-container .card {
-  height: calc(100vh - 70px);
+  height: calc(100vh - 20px);
   border-bottom: none;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
@@ -236,8 +236,8 @@ body {
 }
 
 .table {
-  margin-left: -16%;
-  width: 118%;
+  margin-left: -13%;
+  width: 95%;
 }
 
 tbody {
@@ -332,7 +332,20 @@ tbody {
 
 @media screen and (max-width: 600px) {
   .table {
-    margin-left: -60%;
+    margin-left: -40%;
+  }
+} 
+
+@media screen and (max-width: 600px) {
+  #album-head, #album-data {
+    display: none;
+  }
+} 
+
+
+@media screen and (max-width: 600px) {
+  #audio-file {
+    width: 100%;
   }
 } 
 

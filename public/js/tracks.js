@@ -2,7 +2,7 @@ function storeInput(e) {
   e.preventDefault()
   searchInput = $("#userInput").val()
   typeInput = $("#type").val()
-  
+
   localStorage.setItem("search", searchInput)
   localStorage.setItem("type", typeInput)
   document.location.replace("/tracks")
@@ -11,34 +11,32 @@ $("#searchBtn").on("click", storeInput)
 
 
 const renderTracks = (trackArr) => {
- 
+
   let tableHead = $('#thead')
   tableHead.append(`
   <tr>
   <th>Name</th>
   <th>Artist</th>
-  <th>Album</th>
-  <th>Genre</th>
+  <th id="album-head">Album</th>
   <th>Play</th>
   <th>Save</th>
 </tr>
   `)
   let tableBody = $('#tbody')
-trackArr.forEach((track)=> {
-  let tr = $('<tr>')
-  let rowData = `
+  trackArr.forEach((track) => {
+    let tr = $('<tr>')
+    let rowData = `
   <th scope="row" class="track-title">${track.name}</th>
                     <td>${track.artists[0].name}</td>
-                    <td>${track.album.name}</td>
-                    <td>WE DONT KNOW YET</td>
-                    <td><button id="play-one-btn">&#9836;<audio controls>
+                    <td id="album-data">${track.album.name}</td>
+                    <td><button id="play-one-btn">&#9836;<audio controls id="audio-file">
                     <source src="${track.preview_url}" type="audio/mp3">
                   </audio></button></td>
                     <td><button id="plus-one-btn">+1</button></td>
   `
-tr.append(rowData);
-tableBody.append(tr);
-})
+    tr.append(rowData);
+    tableBody.append(tr);
+  })
 }
 
 const renderTopTracks = async (id) => {
@@ -52,71 +50,60 @@ const renderTopTracks = async (id) => {
     });
 
     if (response.ok) {
-        let data = await response.json();
-       
+      let data = await response.json();
+
       renderTracks(data.tracks)
-        
 
-
-
-     //return response.json()
+      //return response.json()
     } else {
       alert('Failed to create project');
     }
-    
-} catch (error) {
+
+  } catch (error) {
     console.log(error);
+  }
+
+
 }
 
-  
-}
-
-//for each row item we need a button that will do an API call
-  // API call needs artists ID
-  //
 
 const getSpotify = async () => {
-  
+
 
   let input = localStorage.getItem("search")
   let type = localStorage.getItem("type")
   try {
-      const response = await fetch(`/api/tracks`, {
-        method: 'POST',
-        body: JSON.stringify({ input, type }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-  
-      if (response.ok) {
-          let data = await response.json();
+    const response = await fetch(`/api/tracks`, {
+      method: 'POST',
+      body: JSON.stringify({ input, type }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
 
-          if( data.artists){
-            let resultArr = data.artists.items
-            renderTopTracks(resultArr[0].id)
-            //console.log(resultArr);
-          }
-          if( data.tracks){
-            let resultArr = data.tracks.items
-            renderTracks(resultArr)
-           
-          }
-          if( data.albums){
-            let resultArr = data.albums.items
-            console.log(resultArr)
-          }
-          ;
+    if (response.ok) {
+      let data = await response.json();
 
-
-
-       //return response.json()
-      } else {
-        alert('Failed to create project');
+      if (data.artists) {
+        let resultArr = data.artists.items
+        renderTopTracks(resultArr[0].id)
+        // console.log(resultArr);
       }
-      
+      if (data.tracks) {
+        let resultArr = data.tracks.items
+        renderTracks(resultArr)
+
+      }
+      if (data.albums) {
+        let resultArr = data.albums.items
+        console.log(resultArr)
+      };
+    } else {
+      alert('Failed to create project');
+    }
+
   } catch (error) {
-      console.log(error);
+    console.log(error);
   }
 
 }
