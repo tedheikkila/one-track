@@ -18,14 +18,14 @@
         <div style="margin-top: 20px;" class="jumbotron text-center" id="jumbo-2">
           <h1 class="display-4">Search <span role="img" aria-label="Memo">&#9782;</span></h1>
           <form id="search-form" class="form">
-            <select id="format-input" class="form-input">
+            <select id="type" class="form-input">
               <option value="" disabled selected>Select an option</option>
-              <option value="Songs">Song</option>
-              <option value="Artist">Artist</option>
-              <option value="Genre">Genre</option>
+              <option value="track">Song</option>
+              <option value="artist">Artist</option>
+              <option value="album">Album</option>
             </select>
-            <input id="search-input" class="form-input w-100" type="text" placeholder="Royals, Beck, R&B">
-            <button class="btn btn-info btn-block" id="submit-search">Submit</button>
+            <input id="userInput" class="form-input w-100" type="text" placeholder="Royals, Beck, R&B">
+            <input class="btn btn-info btn-block" type="submit" id="searchBtn" text="Search">
           </form>
         </div>
       </div>
