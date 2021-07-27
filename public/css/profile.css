@@ -1,0 +1,225 @@
+* {
+  box-sizing: border-box;
+}
+
+.profile-nav {
+  color: white;
+  font-size: 20px;
+  padding-right: 100px;
+}
+
+.profile-nav:hover {
+  color:rgb(238, 113, 227);
+  text-decoration: none;
+}
+
+.log-out-nav {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color:white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.log-out-nav:hover {
+  color: rgb(238, 113, 227)
+}
+
+body {
+  font-family: 'Croissant One', cursive;
+  background-color: gainsboro;
+}
+
+#profile-row {
+  margin-bottom: -5%;
+}
+
+#profile-container {
+  text-align: center;
+}
+
+.profile-name {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.profile-pic {
+  border-radius: 100px;
+}
+
+#profile-form {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#profile-search {
+  background-color: black;
+  font-size: 20px;
+  border: none
+}
+
+#profile-search:hover {
+  color:rgb(81, 216, 216)
+}
+
+
+
+:root {
+    --primary: black;
+    --secondary: rgb(238, 113, 227);
+    --tertiary: rgb(81, 216, 216);
+    --background: gainsboro;
+  }
+
+  main {
+    width: 95%;
+    margin: 2rem auto;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+
+  figure {
+    height: 90%;
+  }
+  
+  .card-column {
+    flex: 1 0 100%;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  #card-figure {
+    text-align: center;
+  }
+  
+  .code-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 70%;
+    padding: 2.5rem;
+    color: var(--secondary);
+    border: 3px solid var(--primary);
+    outline-offset: -2px;
+    background-color: black;
+    opacity: 90%;
+    border-radius: 5px;
+  }
+  
+  .code-card .card-header {
+    position: relative;
+    margin: -1rem 0 0.5rem 0;
+    padding: 0.5rem 1rem;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .code-card .code-block {
+    flex-grow: 1;
+  }
+
+  .card-body {
+    text-align: center
+  }
+
+  #artist {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+  }
+
+  #album {
+    margin-top: 10px;
+    border-radius: 10px;
+    filter: saturate(150%);
+  }
+  
+  #audio {
+    text-align: center;
+    width: 90%;
+  }
+
+  #delete-track {
+    border: none;
+    background-color: black;
+    color: rgb(238, 113, 227);
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  #delete-track:hover {
+    color:rgb(81, 216, 216)
+  }
+  
+  .code-card pre {
+    white-space: pre-wrap;
+    overflow: auto;
+    tab-size: 4;
+    padding: 1.2rem 1rem;
+    color: var(--background);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+  }
+
+  .code-card pre:active {
+    user-select: all;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .card-column {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+      .card-column:last-child {
+      flex-grow: 1;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    #album {
+      margin-left: 18%;
+      margin-right: 18%;
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    .card-column {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .one-track-nav {
+      font-size: 25px;
+    }
+  } 
+  
+  @media screen and (max-width: 600px) {
+    .profile-nav, .log-in-nav, .tracks-nav, .log-out-nav {
+      font-size: 16px;
+    }
+  } 
+
+  @media screen and (max-width: 600px) {
+    #album {
+      margin-left: 25%;
+    }
+  } 

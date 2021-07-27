@@ -1,21 +1,341 @@
-header, .blog:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+* {
+  box-sizing: border-box;
 }
 
-.no-button {
+body {
+  font-family: 'Croissant One', cursive;
+  background-color: gainsboro;
+}
+
+#header-nav {
+  background-color: black;
+  height: 150px;
+  border-bottom: solid 20px rgb(238, 113, 227)
+}
+
+.one-track-nav {
+  color: white;
+  margin-left: 20px;
+}
+
+.one-track-nav:hover {
+  color:rgb(238, 113, 227);
+  text-decoration: none;
+}
+
+.tracks-nav {
+  color: white;
+  font-size: 20px;
+  margin-left: -10%;
+  padding-right: 50px;
+}
+
+.tracks-nav:hover {
+  color:rgb(81, 216, 216);
+  text-decoration: none;
+}
+
+.log-in-nav {
+  font-size: 20px;
+  color: white
+}
+
+.log-in-nav:hover {
+  color:rgb(238, 113, 227);
+  text-decoration: none;
+}
+
+.container {
+  display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+}
+
+.jumbotron {
+  margin: 3%;
+  border: solid black 5px; 
+  border-radius: 20px;
+}
+
+#jumbo-1 {
+  background-color: rgb(238, 113, 227);
+  position: relative;
+}
+
+#log-in {
+  background-color: black;
+  width: 100%;
+}
+
+#sign-up {
+  background-color: black;
+  width: 40%;
+  font-size: 15px
+}
+
+#log-in:hover {
+  color: rgb(238, 113, 227)
+}
+
+#sign-up:hover {
+  color: rgb(238, 113, 227)
+}
+
+#password {
+  margin-top: 10px;
+}
+
+#jumbo-2 {
+  background-color: rgb(81, 216, 216);
+  position: relative;
+  height: 515px;
+  width: 100%;
+}
+
+#search-form {
+  margin-top: 75px;
+}
+
+#search-form-tracks {
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 90%;
+  font-size: 20px;
+}
+
+#submit-search {
+  background-color: black;
+  font-size: 20px;
+  border: none
+}
+
+#submit-search:hover {
+  color:rgb(81, 216, 216)
+}
+
+#jumbo-3 {
+  background-color: black;
+  position: relative;
+  color: white;
+  border: solid 5px white;
+  width: 88%;
+  height: 90%;
+}
+
+#jumbo-4 {
+  background-color: white;
+  position: relative;
+  border: solid 5px black;
+  width: 125%;
+  height: 90%;
+  margin-left: -9%;
+}
+
+.mySlides1 {
+  display: none;
+  color: white
+}
+
+#home-images {
+  border-radius: 10px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px
+}
+
+.prev:hover {
+  background-color: rgb(238, 113, 227);
+}
+
+.next:hover {
+ background-color: rgb(81, 216, 216);
+}
+
+.footer-home {
+  background-color: black;
+  width: 100%;
+  height: 125px;
+  color: white;
+  text-align: center;
+  font-size:15px;
+  padding:10px;
+  margin-top:50px;
+  border-top: solid 20px rgb(81, 216, 216);
+}
+
+.copyrights {
+  margin-top:25px;
+}
+
+.footer-api {
+  margin-left: 50px
+}
+
+.list-container .card {
+  height: calc(100vh - 70px);
+  border-bottom: none;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: rgb(81, 216, 216);
+  width: 75%;
+}
+
+.list-container {
+  padding-left: 0;
+}
+
+.list-container .list-group,
+.list-container .list-group-item:first-child,
+.list-container .card {
+  border-top: none;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.list-item-title {
+  display: inline-block;
+}
+
+.list-container i {
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.list-group-item {
+  background-color: black;
+  color: white
+}
+
+.list-container .list-group-item {
+  border-left: none;
+  border-right: none;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.table {
+  margin-left: -16%;
+  width: 118%;
+}
+
+tbody {
+  font-size: 15px;
+}
+
+.library-thead {
+  background-color: white;
+}
+
+#plus-one-btn, #play-one-btn {
+  border-radius: 5px;
+}
+
+#play-one-btn:hover {
+  cursor: pointer;
+  background-color: rgb(81, 216, 216);
+}
+
+#plus-one-btn:hover {
+  cursor: pointer;
+  background-color: rgb(81, 216, 216);
+}
+
+.profile-nav {
+  color: white;
+  font-size: 20px;
+  padding-right: 100px;
+}
+
+.profile-nav:hover {
+  color:rgb(238, 113, 227);
+  text-decoration: none;
+}
+
+.log-out-nav {
   background: none;
   border: none;
-  padding: 0;
   cursor: pointer;
-  color: #1b89bc;
+  color:white;
   text-decoration: none;
-  font-size: 100%;
+  font-size: 20px;
 }
 
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
+.log-out-nav:hover {
+  color: rgb(238, 113, 227)
 }
+
+@media screen and (max-width: 1000px) {
+  .container {
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+} 
+
+@media screen and (max-width: 600px) {
+  .container {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+} 
+
+@media screen and (max-width: 600px) {
+  .one-track-nav {
+    font-size: 25px;
+  }
+} 
+
+@media screen and (max-width: 600px) {
+  .profile-nav, .log-in-nav, .tracks-nav, .log-out-nav {
+    font-size: 16px;
+  }
+} 
+
+@media screen and (max-width: 600px) {
+  #jumbo-3 {
+    width: 95%;
+  }
+} 
+
+@media screen and (max-width: 600px) {
+  #jumbo-4 {
+    margin-left: 7%;
+  }
+} 
+
+@media screen and (max-width: 600px) {
+  .list-container .card {
+    display: none;
+  }
+} 
+
+@media screen and (max-width: 600px) {
+  .table {
+    margin-left: -60%;
+  }
+} 
+
 .avatar {
   display: inline-block;
   width: 50px;
@@ -37,4 +357,5 @@ header, .blog:not(:last-child) {
 [type=radio]:checked + img {
   outline: 2px solid #f00;
 }
+
 

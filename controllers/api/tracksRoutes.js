@@ -1,8 +1,7 @@
 const router = require('express').Router();
 const { Tracks } = require('../../models');
-const withAuth = require('../../utils/auth');
 
-router.post('/', withAuth, async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const newTrack = await Tracks.create({
       ...req.body,
@@ -15,7 +14,7 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const trackData = await Tracks.destroy({
       where: {

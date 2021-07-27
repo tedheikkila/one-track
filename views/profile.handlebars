@@ -1,44 +1,142 @@
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
-  </div>
-</div>
+<head>
+  <link rel="stylesheet" href="/css/profile.css">
+</head>
 
-<div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Create New Library:</h3>
-
-    <form class="form new-blog-form">
-      <div class="form-group">
-        <label for="blog-name">track name:</label>
-        <input class="form-input" type="text" id="blog-name" name="blog-name" />
-      </div>
-      <div class="form-group">
-        <label for="blog-desc">artist:</label>
-        <textarea class="form-input" id="blog-desc" name="blog-desc"></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
-      </div>
+<section class="row justify center" id="profile-row">
+  <div class="card-column">
+    <form id="profile-form" class="profile-form">
+      <input id="search-profiles" class="form-input w-100" type="text" placeholder="Search profiles">
+      <button class="btn btn-info btn-block" id="profile-search">Search</button>
     </form>
   </div>
-
-  {{#if tracks.length}}
-  <div class="col-md-6 project-list">
-    <h3>Current Tracks:</h3>
-
-    {{#each tracks as |track|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/blog/{{track.id}}">{{track.name}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{track.id}}">DELETE</button>
-      </div>
+  <div class="card-column">
+    <div id="profile-container">
+      <h2 class="profile-name">{{name}}</h2>
+      <img class="profile-pic" src="https://i.pinimg.com/280x280_RS/36/b0/6f/36b06fe18cf3cff94fb0febfc009dc3e.jpg"
+        width="200" height="200" alt="ProfileImageUpload">
+      </img>
     </div>
-    {{/each}}
   </div>
-  {{/if}}
-</div>
+  <div class="card-column">
+    <h2 class="profile-name"># of Songs</h2>
+  </div>
+</section>
+
+<main>
+  <section class="row justify-center">
+    <div class="card-column">
+      <figure class="card code-card" id="card-figure">
+        <h2 class="card-header">Without Me</h2>
+        <div class="card-body">
+          <img id="album" src="https://upload.wikimedia.org/wikipedia/en/3/35/The_Eminem_Show.jpg" width="200"
+            height="200"></img>
+          <p id="artist">Eminem</p>
+          <audio controls id="audio">
+            <source src="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3"
+              type="audio/mpeg">
+          </audio>
+        </div>
+        <button type="button" class="btn btn-info" id="delete-track">Delete</button>
+      </figure>
+    </div>
+    <div class="card-column">
+      <figure class="card code-card" id="card-figure">
+        <h2 class="card-header">Immigrant Song</h2>
+        <div class="card-body">
+          <img id="album" src="https://images-na.ssl-images-amazon.com/images/I/61GyqBK4e-L.jpg" width="200"
+            height="200"></img>
+          <p id="artist">Led Zeppelin</p>
+          <audio controls id="audio">
+            <source src="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3"
+              type="audio/mpeg">
+          </audio>
+        </div>
+        <button type="button" class="btn btn-info" id="delete-track">Delete</button>
+      </figure>
+    </div>
+
+    <div class="card-column">
+      <figure class="card code-card" id="card-figure">
+        <h2 class="card-header">Royals</h2>
+        <div class="card-body">
+          <img id="album" src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Lorde_Pure_Heroine.png" width="200"
+            height="200"></img>
+          <p id="artist">Lorde</p>
+          <audio controls id="audio">
+            <source src="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3"
+              type="audio/mpeg">
+          </audio>
+        </div>
+        <button type="button" class="btn btn-info" id="delete-track">Delete</button>
+      </figure>
+    </div>
+    <div class="card-column">
+      <figure class="card code-card" id="card-figure">
+        <h2 class="card-header">Killer Queen</h2>
+        <div class="card-body">
+          <img id="album" src="https://images-na.ssl-images-amazon.com/images/I/71Pgwm3ZRQL._SL1095_.jpg" width="200"
+            height="200"></img>
+          <p id="artist">Queen</p>
+          <audio controls id="audio">
+            <source src="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3"
+              type="audio/mpeg">
+          </audio>
+        </div>
+        <button type="button" class="btn btn-info" id="delete-track">Delete</button>
+      </figure>
+    </div>
+    <div class="card-column">
+      <figure class="card code-card" id="card-figure">
+        <h2 class="card-header">Style</h2>
+        <div class="card-body">
+          <img id="album" src="https://upload.wikimedia.org/wikipedia/en/f/f6/Taylor_Swift_-_1989.png" width="200"
+            height="200"></img>
+          <p id="artist">Taylor Swift</p>
+          <audio controls id="audio">
+            <source src="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3"
+              type="audio/mpeg">
+          </audio>
+        </div>
+        <button type="button" class="btn btn-info" id="delete-track">Delete</button>
+      </figure>
+    </div>
+
+    <div class="card-column">
+      <figure class="card code-card" id="card-figure">
+        <h2 class="card-header">Come Together</h2>
+        <div class="card-body">
+          <img id="album" src="https://upload.wikimedia.org/wikipedia/en/4/42/Beatles_-_Abbey_Road.jpg" width="200"
+            height="200"></img>
+          <p id="artist">The Beatles</p>
+          <audio controls id="audio">
+            <source src="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3"
+              type="audio/mpeg">
+          </audio>
+        </div>
+        <button type="button" class="btn btn-info" id="delete-track">Delete</button>
+      </figure>
+    </div>
+  </section>
+</main>
+
 
 <script src="./js/profile.js"></script>
+
+
+{{!-- {{#if tracks.length}}
+<div class="col-md-6 project-list">
+  <h3>Current Tracks:</h3>
+
+  {{#each tracks as |track|}}
+  <div class="row mb-2">
+    <div class="col-md-8">
+      <h4><a href="/blog/{{track.id}}">{{track.name}}</a></h4>
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-sm btn-danger" data-id="{{track.id}}">DELETE</button>
+    </div>
+  </div>
+  {{/each}}
+</div>
+{{/if}}
+</div> --}}

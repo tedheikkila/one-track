@@ -27,6 +27,31 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/tracks', async (req, res) => {
+  try {
+    // Get all tracks
+    const trackData = await Tracks.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+
+    // Serialize data so the template can read it
+    const tracks = trackData.map((track) => track.get({ plain: true }));
+
+    // Pass serialized data and session flag into template
+    res.render('tracks', { 
+      tracks, 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get('/track/:id', async (req, res) => {
   try {
     const blogData = await Blog.findByPk(req.params.id, {

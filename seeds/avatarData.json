@@ -1,0 +1,22 @@
+[
+    {
+      "name": "person1",
+      "filename": "avatar1.jpg"
+    },
+    {
+      "name": "person2",
+      "filename": "avatar2.jpg"
+    },
+    {
+      "name": "person3",
+      "filename": "avatar3.jpg"
+    },
+    {
+      "name": "person4",
+      "filename": "avatar4.jpg"
+    },
+    {
+      "name": "person5",
+      "filename": "avatar5.jpg"
+    }
+  ]

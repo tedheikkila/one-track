@@ -1,10 +1,63 @@
-<div class="text-center">
-  <h2>{{name}}</h2>
-  <p>{{{get_emoji}}}</p>
-  <p>{{title}}</p>
-  <p>{{artist}}</p>
-  <p>{{filename}}</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4 list-container">
+            <div class="card">
+                <form id="search-form-tracks" class="form">
+                    <select id="format-input" class="form-input">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="Songs">Song</option>
+                        <option value="Artist">Artist</option>
+                        <option value="Genre">Genre</option>
+                    </select>
+                    <input id="search-input" class="form-input w-100" type="text" placeholder="Royals, Beck, R&B">
+                    <button class="btn btn-info btn-block" id="submit-search">Submit</button>
+                </form>
+                <ul class="list-group">
+                    <!-- Saved tracks get appended here -->
+                </ul>
+            </div>
+        </div>
+        <div class="col-8">
+            <!-- Table from Spotify api call goes here -->
+            <table class="table table-striped table-hover table-bordered">
+                <thead class="library-thead">
+                    <tr>
+                        <th>Name</th>
+                        <th>Artist</th>
+                        <th>Album</th>
+                        <th>Genre</th>
+                        <th>Play</th>
+                        <th>Save</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <th scope="row" class="track-title">Wow</th>
+                    <td>Beck</td>
+                    <td>Colors</td>
+                    <td>Indie Rock</td>
+                    <td><button id="play-one-btn">&#9836;</button></td>
+                    <td><button id="plus-one-btn">+1</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="track-title">Without Me</th>
+                        <td>Eminem</td>
+                        <td>The Eminem Show</td>
+                        <td>Rap</td>
+                        <td><button id="play-one-btn">&#9836;</button></td>
+                        <td><button id="plus-one-btn">+1</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="track-title">Immigrant Song</th>
+                        <td class="track-data">Led Zeppelin</td>
+                        <td class="track-data">Early Days</td>
+                        <td class="track-data">Rock</td>
+                        <td><button id="play-one-btn">&#9836;</button></td>
+                        <td><button id="plus-one-btn">+1</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
- 
 
-
+<script>src = "/js/tracks.js"</script>
