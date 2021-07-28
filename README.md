@@ -5,13 +5,10 @@ browse the best songs. develop your own personal music library
 
   - [Team](#team)
   - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contributing](#contributing)
+  - [Technologies](#technologies)
+  - [Deployment](#deployment)
   - [License](#license)
-  - [Tests](#tests)
   - [Questions](#questions)
-  - [Demo](#demo)
   - [Screenshots](#screenshots)
 
    ## Team
@@ -20,48 +17,27 @@ browse the best songs. develop your own personal music library
   
   ## Description
 
-  What is this app and what does it do:
-
-  This app is designed for a user who wants...placeholder.
+  This is a PC and mobile app designed for a user who wants to easily browse a music database and develop a polished profile page for their favorite songs. It also has the potential in the future to function as a platform for artists to be able to upload their own tracks, album art, and profile information. 
   
-  Technologies used: VSC, Javascript, Node, MySQL, mysql2, sequelize, express, dotenv, and placeholder.
+  ## Technologies:
 
-  * To see the app in action, check out the deployed app on Heroku here >> 
+  * Front-end: CSS, Bootstrap, Google Fonts, Javascript, jQuery
+  * Back-end: Sequelize, MySQL, mysql2, dotenv, bcrypt, axios, express, handlebars, session
+  * Dev-deps: eslint, nodemon, prettier
 
-  * App can also be view on GitHub here >>  https://tedheikkila.github.io/one-track/
+  ## Deployment:
 
-
-  ## Installation
-
-  To install npm dependencies (dotenv, mysql2, sequelize, express, etc), please use this command >> npm install
-
-  ## Usage
-
-  Here's the essentials for what you need to know to use this app: 
-
-  Placeholder.
-
-  ## Contributing
-
-  To contribute to this app, please follow these instructions: 
-  
-  Please add descriptive commit messages and comments. Remember to do a npm install for relevant dependencies and other packages that you desire. Create a .gitignore for the node_modules, dotenv, and package-lock.json folder if/when pushing to GitHub.
+  To see the app in action, check out the deployed app on Heroku here >> 
 
   ## License
   
-  * MIT license.
-
-  ## Tests
-
-  * No tests were developed. 
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
   ## Questions
 
-  * If you have any questions/concerns regarding the app, please contact me on GitHub here (see portfolio app): https://github.com/tedheikkila
+  * If you have any questions/concerns regarding the app, please contact me on GitHub here (see portfolio app for email): https://github.com/tedheikkila
 
-  ## Demo
-
-  * Check out the demo/tutorial video here >> placeholder.
+  * Here's the other collaborator's GitHub usernames as well: m-ray-ofSunshine, CortlandSB, mohamedabukar
 
 ## Screenshots
 
