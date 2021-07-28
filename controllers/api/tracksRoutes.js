@@ -4,12 +4,13 @@ const withAuth = require('../../utils/auth');
 const axios = require('axios');
 
 const querystring = require('querystring');
+require('dotenv').config();
 
 
 
 
-var client_id = '1713901affcb498a956cc29a7f7f5880'; // Your client id
-var client_secret = '91a8194067164571b0698dbafcbfb044'; // Your secret
+var client_id = process.env.CLIENT_ID; // Your client id
+var client_secret = process.env.CLIENT_SECRET; // Your secret
 
 
 
