@@ -1,4 +1,4 @@
-
+// grabs artist/song input and searches in Spotify
 function storeInput(e) {
   e.preventDefault()
   searchInput = $("#userInput").val()
@@ -10,6 +10,8 @@ function storeInput(e) {
 }
 $("#searchBtn").on("click", storeInput)
 
+
+// slideshow gallery on homepage
 var slideIndex = [1,];
 var slideId = ["mySlides1",] 
 showSlides(1, 0); showSlides(1, 1); showSlides(1, 2)

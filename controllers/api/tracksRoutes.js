@@ -6,14 +6,11 @@ const axios = require('axios');
 const querystring = require('querystring');
 require('dotenv').config();
 
-
-
-
+// for 3rd party API Spotify
 var client_id = process.env.CLIENT_ID; // Your client id
 var client_secret = process.env.CLIENT_SECRET; // Your secret
 
-
-
+// axios post for Spotify creds
 const spotifyAuth = async () => {
   try {
     const res = await axios.post('https://accounts.spotify.com/api/token', querystring.stringify({ 'grant_type': 'client_credentials' }), {
@@ -25,27 +22,29 @@ const spotifyAuth = async () => {
   } catch (error) {
     console.log(error);
   }
-  
 }
- 
+
+// axios post to get Spotify creds on input and type search
 router.post('/', async (req, res) => {
   let token = await spotifyAuth();
-  
+
   let input = req.body.input;
   let type = req.body.type;
- const search = await axios.get('https://api.spotify.com/v1/search/?q=' + input + '&type=' + type, {
+  const search = await axios.get('https://api.spotify.com/v1/search/?q=' + input + '&type=' + type, {
     headers: {
       'Authorization': 'Bearer ' + token
     },
   })
   res.json(search.data);
 })
+
+// posts to toptracks on library page
 router.post('/toptracks', async (req, res) => {
   let token = await spotifyAuth();
-  
+
   let id = req.body.id;
-  
- const search = await axios.get('https://api.spotify.com/v1/artists/' + id + '/top-tracks?market=us', {
+
+  const search = await axios.get('https://api.spotify.com/v1/artists/' + id + '/top-tracks?market=us', {
     headers: {
       'Authorization': 'Bearer ' + token
     },
@@ -53,26 +52,24 @@ router.post('/toptracks', async (req, res) => {
   res.json(search.data);
 })
 
-router.post('/newtrack', withAuth,  async (req, res) => {
- try {
-  const trackData = await Track.create({
-    ...req.body,
-    user_id: req.session.user_id,
-  });
+// saves track to profile page
+router.post('/newtrack', withAuth, async (req, res) => {
+  try {
+    const trackData = await Track.create({
+      ...req.body,
+      user_id: req.session.user_id,
+    });
 
+    res.status(200).json(trackData);
 
-  res.status(200).json(trackData);
+  } catch (err) {
+    console.log(err);
+    res.status(400).json(err);
+  }
 
-
- } catch (err) {
-   console.log(err);
-  res.status(400).json(err);
- }
-   
 })
 
 // delete one track by its `id` value
-
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const trackData = await Track.destroy({

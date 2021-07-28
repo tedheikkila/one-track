@@ -23,39 +23,35 @@
       {{tracks.length}} Song(s)
       {{else}} Browse Library to Add Songs
       {{/if}}
-      </h2>
+    </h2>
   </div>
 </section>
 
 <main>
 
-    {{#if tracks.length}}
+  {{#if tracks.length}}
 
-    {{#each tracks as |track|}}
+  {{#each tracks as |track|}}
+
   <section class="row justify-center" id="cardContainer">
-   
-<div class="card-column">
-  <figure class="card code-card" id="card-figure">
-    <h2 class="card-header">{{track.title}}</h2>
-    <div class="card-body">
-      <img id="album" src="{{track.album_image}}" width="200"
-        height="200"></img>
-        
-      <p id="artist">{{track.artist}}</p>
-      <audio controls id="audio">
-        <source src={{track.url}} type="audio/mpeg">
-      </audio>
+    <div class="card-column">
+      <figure class="card code-card" id="card-figure">
+        <h2 class="card-header">{{track.title}}</h2>
+        <div class="card-body">
+          <img id="album" src="{{track.album_image}}" width="200" height="200"></img>
+          <p id="artist">{{track.artist}}</p>
+          <audio controls id="audio">
+            <source src={{track.url}} type="audio/mpeg">
+          </audio>
+        </div>
+        <button type="button" class="btn btn-info" data_id="{{track.id}}" id="delete-track">Delete</button>
+      </figure>
     </div>
-    <button type="button" class="btn btn-info" data_id="{{track.id}}" id="delete-track">Delete</button>
-  </figure>
-</div>
 
-{{/each}}
-
-{{/if}}
-
+    {{/each}}
+    
+    {{/if}}
   </section>
 </main>
-
 
 <script src="./js/profile.js"></script>

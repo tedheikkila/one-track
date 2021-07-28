@@ -1,3 +1,5 @@
+
+// logins in user
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -22,6 +24,7 @@ const loginFormHandler = async (event) => {
   }
 };
 
+// signs up new user
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
@@ -45,6 +48,7 @@ const signupFormHandler = async (event) => {
   }
 };
 
+// calls login and signup on document
 document
   .querySelector('.login-form')
   .addEventListener('submit', loginFormHandler);

@@ -1,3 +1,5 @@
+
+// logs out user
 const logout = async () => {
   const response = await fetch('/api/users/logout', {
     method: 'POST',
@@ -11,4 +13,5 @@ const logout = async () => {
   }
 };
 
+// calls logout fcn
 document.querySelector('#logout').addEventListener('click', logout);
