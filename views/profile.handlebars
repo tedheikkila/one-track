@@ -20,7 +20,7 @@
   <div class="card-column">
     <h2 class="profile-name">
       {{#if tracks.length}}
-      {{track.length}} of Songs
+      {{tracks.length}} Song(s)
       {{else}} Browse Library to Add Songs
       {{/if}}
       </h2>
@@ -28,7 +28,7 @@
 </section>
 
 <main>
-  <section class="row justify-center">
+  <section class="row justify-center" id="card-container">
 
     {{#if tracks.length}}
 
@@ -45,7 +45,7 @@
             <source src={{track.url}} type="audio/mpeg">
           </audio>
         </div>
-        <button type="button" class="btn btn-info" id="delete-track">Delete</button>
+        <button type="button" class="btn btn-info" data-id={{track.id}} id="delete-track">Delete</button>
       </figure>
     </div>
     {{/each}}

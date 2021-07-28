@@ -13,6 +13,7 @@ User.hasOne(Avatar, {
 });
 
 Track.belongsTo(User, {
+  onDelete: 'CASCADE',
   foreignKey: 'user_id'
 });
 

@@ -68,8 +68,27 @@ router.post('/newtrack', withAuth,  async (req, res) => {
    console.log(err);
   res.status(400).json(err);
  }
-  
-  
+   
 })
+
+// delete one track by its `id` value
+router.delete('/:id', async (req, res) => {
+  try {
+    const trackData = await Track.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+
+    if (!trackData) {
+      res.status(404).json({ message: 'No track found with that id' });
+      return;
+    }
+
+    res.status(200).json(trackData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;
