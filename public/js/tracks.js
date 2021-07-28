@@ -102,7 +102,7 @@ const renderTopTracks = async (id) => {
       renderTracks(data.tracks)
 
 
-
+      renderTracks(data.tracks)
 
       //return response.json()
     } else {

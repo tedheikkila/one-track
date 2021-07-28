@@ -26,11 +26,8 @@ const spotifyAuth = async () => {
     console.log(error);
   }
   
-   
 }
-
-
-
+ 
 router.post('/', async (req, res) => {
   let token = await spotifyAuth();
   
@@ -71,9 +68,10 @@ router.post('/newtrack', withAuth,  async (req, res) => {
    console.log(err);
   res.status(400).json(err);
  }
-  
-  
+   
 })
+
+// delete one track by its `id` value
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {
@@ -85,7 +83,7 @@ router.delete('/:id', withAuth, async (req, res) => {
     });
 
     if (!trackData) {
-      res.status(404).json({ message: 'No project found with this id!' });
+      res.status(404).json({ message: 'No track found with that id' });
       return;
     }
 
@@ -97,4 +95,3 @@ router.delete('/:id', withAuth, async (req, res) => {
 
 
 module.exports = router;
-
