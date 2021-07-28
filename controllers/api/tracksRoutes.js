@@ -1,13 +1,18 @@
 const router = require('express').Router();
-require('dotenv').config();
-
+const { Track } = require('../../models');
 const withAuth = require('../../utils/auth');
 const axios = require('axios');
 
 const querystring = require('querystring');
+require('dotenv').config();
 
-var client_id = process.env.client_id; // Your client id
-var client_secret = process.env.client_secret // Your secret
+
+
+
+var client_id = process.env.CLIENT_ID; // Your client id
+var client_secret = process.env.CLIENT_SECRET; // Your secret
+
+
 
 const spotifyAuth = async () => {
   try {
@@ -46,6 +51,25 @@ router.post('/toptracks', async (req, res) => {
     },
   })
   res.json(search.data);
+})
+
+router.post('/newtrack', withAuth,  async (req, res) => {
+ try {
+  const trackData = await Track.create({
+    ...req.body,
+    user_id: req.session.user_id,
+  });
+
+
+  res.status(200).json(trackData);
+
+
+ } catch (err) {
+   console.log(err);
+  res.status(400).json(err);
+ }
+  
+  
 })
 
 module.exports = router;

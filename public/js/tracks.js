@@ -17,7 +17,7 @@ const renderTracks = (trackArr) => {
   <tr>
   <th>Name</th>
   <th>Artist</th>
-  <th id="album-head">Album</th>
+  <th>Album</th>
   <th>Play</th>
   <th>Save</th>
 </tr>
@@ -28,8 +28,8 @@ const renderTracks = (trackArr) => {
     let rowData = `
   <th scope="row" class="track-title">${track.name}</th>
                     <td>${track.artists[0].name}</td>
-                    <td id="album-data">${track.album.name}</td>
-                    <td><button id="play-one-btn">&#9836;<audio controls id="audio-file">
+                    <td>${track.album.name}<img src=${track.album.images[1].url} alt="${track.album.name} cover image" style="display: none" width="1" height="1" /> </td>
+                    <td><button id="play-one-btn">&#9836;<audio controls>
                     <source src="${track.preview_url}" type="audio/mp3">
                   </audio></button></td>
                     <td><button id="plus-one-btn">+1</button></td>
@@ -38,6 +38,53 @@ const renderTracks = (trackArr) => {
     tableBody.append(tr);
   })
 }
+
+const addToProfile = async (e) => {
+  e.preventDefault()
+
+  let rowData = e.target.parentElement.parentElement.children
+  console.log(rowData);
+  
+  let title = rowData[0].innerText
+  let artist = rowData[1].innerText
+  let album = rowData[2].innerText
+  let url = rowData[3].children[0].childNodes[1].childNodes[1].attributes[0].textContent;
+  let album_image = rowData[2].childNodes[1].currentSrc
+
+  console.log(title, artist, album, url, album_image);
+
+  try {
+    const response = await fetch(`/api/tracks/newtrack`, {
+      method: 'POST',
+      body: JSON.stringify({ title, artist, album, url, album_image }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (response.ok) {
+      console.log("New track saved");
+
+
+
+
+      //return response.json()
+    } else {
+      alert('Failed to create project');
+    }
+
+  } catch (error) {
+    console.log(error);
+  }
+
+
+
+}
+
+
+$("#tbody").on("click", "button", addToProfile)
+
+
 
 const renderTopTracks = async (id) => {
   try {
@@ -54,6 +101,9 @@ const renderTopTracks = async (id) => {
 
       renderTracks(data.tracks)
 
+
+      renderTracks(data.tracks)
+
       //return response.json()
     } else {
       alert('Failed to create project');
@@ -66,6 +116,9 @@ const renderTopTracks = async (id) => {
 
 }
 
+//for each row item we need a button that will do an API call
+// API call needs artists ID
+//
 
 const getSpotify = async () => {
 
@@ -87,7 +140,7 @@ const getSpotify = async () => {
       if (data.artists) {
         let resultArr = data.artists.items
         renderTopTracks(resultArr[0].id)
-        // console.log(resultArr);
+        //console.log(resultArr);
       }
       if (data.tracks) {
         let resultArr = data.tracks.items
@@ -97,7 +150,12 @@ const getSpotify = async () => {
       if (data.albums) {
         let resultArr = data.albums.items
         console.log(resultArr)
-      };
+      }
+      ;
+
+
+
+      //return response.json()
     } else {
       alert('Failed to create project');
     }

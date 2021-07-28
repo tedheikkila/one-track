@@ -101,21 +101,29 @@
       </figure>
     </div>
 
-    <div class="card-column">
-      <figure class="card code-card" id="card-figure">
-        <h2 class="card-header">Come Together</h2>
-        <div class="card-body">
-          <img id="album" src="https://upload.wikimedia.org/wikipedia/en/4/42/Beatles_-_Abbey_Road.jpg" width="200"
-            height="200"></img>
-          <p id="artist">The Beatles</p>
-          <audio controls id="audio">
-            <source src="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3"
-              type="audio/mpeg">
-          </audio>
-        </div>
-        <button type="button" class="btn btn-info" id="delete-track">Delete</button>
-      </figure>
+    {{#if tracks.length}}
+
+
+{{#each tracks as |track|}}
+
+<div class="card-column">
+  <figure class="card code-card" id="card-figure">
+    <h2 class="card-header">{{track.title}}</h2>
+    <div class="card-body">
+      <img id="album" src="{{track.album_image}}" width="200"
+        height="200"></img>
+        
+      <p id="artist">{{track.artist}}</p>
+      <audio controls id="audio">
+        <source src={{track.url}} type="audio/mpeg">
+      </audio>
     </div>
+    <button type="button" class="btn btn-info" id="delete-track">Delete</button>
+  </figure>
+</div>
+{{/each}}
+
+{{/if}}
   </section>
 </main>
 
@@ -123,20 +131,3 @@
 <script src="./js/profile.js"></script>
 
 
-{{!-- {{#if tracks.length}}
-<div class="col-md-6 project-list">
-  <h3>Current Tracks:</h3>
-
-  {{#each tracks as |track|}}
-  <div class="row mb-2">
-    <div class="col-md-8">
-      <h4><a href="/blog/{{track.id}}">{{track.name}}</a></h4>
-    </div>
-    <div class="col-md-4">
-      <button class="btn btn-sm btn-danger" data-id="{{track.id}}">DELETE</button>
-    </div>
-  </div>
-  {{/each}}
-</div>
-{{/if}}
-</div> --}}

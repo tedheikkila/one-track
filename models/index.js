@@ -1,8 +1,8 @@
 const User = require('./User');
-const Tracks = require('./Tracks');
+const Track = require('./Track');
 const Avatar = require('./Avatar');
 
-User.hasMany(Tracks, {
+User.hasMany(Track, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });
@@ -12,7 +12,7 @@ User.hasOne(Avatar, {
   onDelete: 'CASCADE'
 });
 
-Tracks.belongsTo(User, {
+Track.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
@@ -20,4 +20,4 @@ Avatar.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-module.exports = { User, Tracks, Avatar };
+module.exports = { User, Track, Avatar };
