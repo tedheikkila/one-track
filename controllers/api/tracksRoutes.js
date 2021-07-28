@@ -75,5 +75,26 @@ router.post('/newtrack', withAuth,  async (req, res) => {
   
 })
 
+router.delete('/:id', withAuth, async (req, res) => {
+  try {
+    const trackData = await Track.destroy({
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      },
+    });
+
+    if (!trackData) {
+      res.status(404).json({ message: 'No project found with this id!' });
+      return;
+    }
+
+    res.status(200).json(trackData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
 module.exports = router;
 
