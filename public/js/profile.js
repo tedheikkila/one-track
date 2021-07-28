@@ -22,25 +22,22 @@ const newFormHandler = async (event) => {
 };
 
 const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute('data-id')) {
-    const id = event.target.getAttribute('data-id');
+  console.log(event);
+  if (event.target.attributes[2].value) {
+    const id = event.target.attributes[2].value;;
 
-    const response = await fetch(`/api/blogs/${id}`, {
+    const response = await fetch(`/api/tracks/${id}`, {
       method: 'DELETE',
     });
 
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      alert('Failed to delete blog');
+      alert('Failed to delete project');
     }
   }
 };
 
-document
-  .querySelector('.new-blog-form')
-  .addEventListener('submit', newFormHandler);
 
-document
-  .querySelector('.blog-list')
-  .addEventListener('click', delButtonHandler);
+
+  $('#cardContainer').on('click','button', delButtonHandler)
