@@ -2,20 +2,18 @@
 const delButtonHandler = async (event) => {
   
   try {
+  console.log(event);
+  if (event.target.attributes[2].value) {
+    const id = event.target.attributes[2].value;;
 
-    if (event.target.hasAttribute('data-id')) {
-      const id = event.target.getAttribute('data-id');
-      console.log(event.target)
-  
-      const response = await fetch(`/api/tracks/${id}`, {
-        method: 'DELETE',
-      });
-  
-      if (response.ok) {
-        document.location.replace('/profile');
-      } else {
-        alert('Failed to delete track');
-      }
+    const response = await fetch(`/api/tracks/${id}`, {
+      method: 'DELETE',
+    });
+
+    if (response.ok) {
+      document.location.replace('/profile');
+    } else {
+      alert('Failed to delete project');
     }
     
   } catch (error) {
@@ -24,4 +22,5 @@ const delButtonHandler = async (event) => {
   
 };
 
-$('#card-container').on('click', "button", delButtonHandler);
+
+  $('#cardContainer').on('click','button', delButtonHandler)
