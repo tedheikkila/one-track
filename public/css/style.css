@@ -194,7 +194,7 @@ body {
 }
 
 .list-container .card {
-  height: calc(100vh - 20px);
+  height: calc(300vh - 70px);
   border-bottom: none;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
@@ -236,9 +236,10 @@ body {
 }
 
 .table {
-  margin-left: -13%;
+  margin-left: -12%;
   width: 95%;
 }
+
 
 tbody {
   font-size: 15px;
@@ -285,69 +286,6 @@ tbody {
 .log-out-nav:hover {
   color: rgb(238, 113, 227)
 }
-
-@media screen and (max-width: 1000px) {
-  .container {
-    margin-right: 10%;
-    margin-left: 10%;
-  }
-} 
-
-@media screen and (max-width: 600px) {
-  .container {
-    margin-right: 5%;
-    margin-left: 5%;
-  }
-} 
-
-@media screen and (max-width: 600px) {
-  .one-track-nav {
-    font-size: 25px;
-  }
-} 
-
-@media screen and (max-width: 600px) {
-  .profile-nav, .log-in-nav, .tracks-nav, .log-out-nav {
-    font-size: 16px;
-  }
-} 
-
-@media screen and (max-width: 600px) {
-  #jumbo-3 {
-    width: 95%;
-  }
-} 
-
-@media screen and (max-width: 600px) {
-  #jumbo-4 {
-    margin-left: 7%;
-  }
-} 
-
-@media screen and (max-width: 600px) {
-  .list-container .card {
-    display: none;
-  }
-} 
-
-@media screen and (max-width: 600px) {
-  .table {
-    margin-left: -40%;
-  }
-} 
-
-@media screen and (max-width: 600px) {
-  #album-head, #album-data {
-    display: none;
-  }
-} 
-
-
-@media screen and (max-width: 600px) {
-  #audio-file {
-    width: 100%;
-  }
-} 
 
 /* signup/login avatar */
 
@@ -413,7 +351,66 @@ tbody {
   margin-top: 5%;
 }
 
+@media screen and (max-width: 1000px) {
+  .container {
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+} 
 
+@media screen and (max-width: 600px) {
+  .container {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+} 
 
+@media screen and (max-width: 600px) {
+  .one-track-nav {
+    font-size: 25px;
+  }
+} 
+
+@media screen and (max-width: 600px) {
+  .profile-nav, .log-in-nav, .tracks-nav, .log-out-nav {
+    font-size: 16px;
+  }
+} 
+
+@media screen and (max-width: 600px) {
+  #jumbo-3 {
+    width: 95%;
+  }
+} 
+
+@media screen and (max-width: 600px) {
+  #jumbo-4 {
+    margin-left: 7%;
+  }
+} 
+
+@media screen and (max-width: 600px) {
+  .list-container .card {
+    display: none
+  }
+} 
+
+@media screen and (max-width: 600px) {
+  .table {
+    margin-left: -40%;
+  }
+} 
+
+@media screen and (max-width: 600px) {
+  #album-head, #album-data {
+    display: none;
+  }
+} 
+
+@media screen and (max-width: 600px) {
+  #audio-file {
+    width: 100%;
+  }
+} 
 
 
