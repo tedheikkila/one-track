@@ -17,7 +17,7 @@ browse the best songs. develop your own personal music library
   
   ## Description
 
-  This is a PC and mobile app designed for a user who wants to easily browse a music database and develop a polished profile page for their favorite songs. It also has the potential in the future to function as a platform for artists to be able to upload their own tracks, album art, and profile information. 
+  This is a PC and mobile app designed for a user who wants to browse a music database and develop a profile page for their favorite songs. It also has the potential in the future to function as a platform for artists to be able to upload their own tracks, album art, and profile information. 
   
   ## Technologies:
 
