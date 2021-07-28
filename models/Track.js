@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Tracks extends Model {}
+class Track extends Model {}
 
-Tracks.init(
+Track.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -18,9 +18,17 @@ Tracks.init(
     artist: {
       type: DataTypes.STRING,
     },
-    filename: {
+    album: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
+    },
+    url: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    album_image: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     date_created: {
       type: DataTypes.DATE,
@@ -40,8 +48,8 @@ Tracks.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'tracks',
+    modelName: 'track',
   }
 );
 
-module.exports = Tracks;
+module.exports = Track;

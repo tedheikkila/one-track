@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const { Tracks, User } = require('../models');
+const { Track, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
     // Get all tracks and JOIN with user data
-    const trackData = await Tracks.findAll({
+    const trackData = await Track.findAll({
       include: [
         {
           model: User,
@@ -30,7 +30,7 @@ router.get('/', async (req, res) => {
 router.get('/tracks', async (req, res) => {
   try {
     // Get all tracks
-    const trackData = await Tracks.findAll({
+    const trackData = await Track.findAll({
       include: [
         {
           model: User,
@@ -80,16 +80,18 @@ router.get('/profile', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Tracks }],
+      include: [{ model: Track }],
     });
 
     const user = userData.get({ plain: true });
+    console.log(user);
 
     res.render('profile', {
       ...user,
       logged_in: true
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
