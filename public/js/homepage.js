@@ -1,19 +1,21 @@
-// grabs artist/song input and searches in Spotify
+
+// grabs artist/song input and stores input for eventual Spotify api call
 function storeInput(e) {
   e.preventDefault()
   searchInput = $("#userInput").val()
   typeInput = $("#type").val()
-  
+
   localStorage.setItem("search", searchInput)
   localStorage.setItem("type", typeInput)
   document.location.replace("/tracks")
 }
+
 $("#searchBtn").on("click", storeInput)
 
 
-// slideshow gallery on homepage
+// slideshow gallery on homepage (advances 3 imgs (0, 1, 2))
 var slideIndex = [1,];
-var slideId = ["mySlides1",] 
+var slideId = ["mySlides1",]
 showSlides(1, 0); showSlides(1, 1); showSlides(1, 2)
 function plusSlides(n, no) {
   showSlides(slideIndex[no] += n, no);
@@ -22,11 +24,10 @@ function plusSlides(n, no) {
 function showSlides(n, no) {
   var i;
   var x = document.getElementsByClassName(slideId[no]);
-  if (n > x.length) {slideIndex[no] = 1} 
-  if (n < 1) {slideIndex[no] = x.length}
+  if (n > x.length) { slideIndex[no] = 1 }
+  if (n < 1) { slideIndex[no] = x.length }
   for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none"; 
+    x[i].style.display = "none";
   }
-  x[slideIndex[no]-1].style.display = "block"; 
+  x[slideIndex[no] - 1].style.display = "block";
 }
-

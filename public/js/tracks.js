@@ -43,7 +43,7 @@ const renderTracks = (trackArr) => {
   })
 }
 
-// saves/adds song to user profile
+// saves/adds a song to user profile on each click event for +1 (aka saveBtn) btns
 const addToProfile = async (e) => {
   e.preventDefault()
 
@@ -76,11 +76,11 @@ const addToProfile = async (e) => {
   }
 }
 
-// calls addToProfile
+// calls addToProfile; event delegation to tbody
 $("#tbody").on("click", "button", addToProfile)
 
 
-// based upon artist entered does another api call based upon artist id to display their top tracks
+// based upon artist entered does another api call using artist id to display their top tracks
 const renderTopTracks = async (id) => {
   try {
     const response = await fetch(`/api/tracks/toptracks`, {
@@ -146,5 +146,5 @@ const getSpotify = async () => {
 }
 
 
-// calls getSpotify to initiate server-server 3rd party API call to Spotify's db
+// calls getSpotify to initiate server to server 3rd party API call to Spotify's db
 getSpotify();

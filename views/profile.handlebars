@@ -2,6 +2,7 @@
   <link rel="stylesheet" href="/css/profile.css">
 </head>
 
+<!-- profile top; search profiles, name/avatar, # of saved tracks -->
 <section class="row justify center" id="profile-row">
   <div class="card-column">
     <form id="profile-form" class="profile-form">
@@ -12,8 +13,7 @@
   <div class="card-column">
     <div id="profile-container">
       <h2 class="profile-name">{{name}}</h2>
-      <img class="profile-pic" src={{avatar.url}}
-        width="200" height="200" alt="ProfileImageUpload">
+      <img class="profile-pic" src={{avatar.url}} width="200" height="200" alt="ProfileImageUpload">
       </img>
     </div>
   </div>
@@ -23,23 +23,19 @@
       {{tracks.length}} Song(s)
       <br>
       <a class="btn btn-primary btn-lg mt-4" href="/tracks" role="button" id="browse-library">Browse Library</a>
-      {{else}} 
+      {{else}}
       <a class="btn btn-primary btn-lg mt-4" href="/tracks" role="button" id="browse-library">Start Browsing</a>
       {{/if}}
     </h2>
   </div>
 </section>
 
+<!-- saved tracks append here from onetrack_db -->
 <main>
-
   <section class="row justify-center" id="cardContainer">
 
-
-
-
-  {{#if tracks.length}}
-
-  {{#each tracks as |track|}}
+    {{#if tracks.length}}
+    {{#each tracks as |track|}}
 
     <div class="card-column">
       <figure class="card code-card" id="card-figure">
@@ -56,8 +52,8 @@
     </div>
 
     {{/each}}
-    
     {{/if}}
+    
   </section>
 </main>
 

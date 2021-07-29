@@ -13,5 +13,5 @@ const logout = async () => {
   }
 };
 
-// calls logout fcn
+// calls logout fcn (terminates session at server level)
 document.querySelector('#logout').addEventListener('click', logout);

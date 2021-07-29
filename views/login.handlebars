@@ -1,6 +1,6 @@
-<!--row encapsulates login & signup for styling-->
+<!-- row encapsulates login & signup forms -->
 <div class="row" id="login-signup-row">
-  <!--login form-->
+  <!-- login form -->
   <div class="col-md-6">
     <h2>Log In</h2>
     <form class="form login-form" id="log-in-form">
@@ -18,70 +18,64 @@
     </form>
   </div>
 
-  <!--signup form-->
+  <!-- signup form -->
   <div class="col-md-6">
     <h2>Sign Up</h2>
+    <p>Don't have an account, sign up below</p>
     <form class="form signup-form" id="sign-up-form">
       <div class="form-group">
-        <!--name-->
+        <!-- name -->
         <label for="name-signup">Name:</label>
         <input class="form-input" type="text" id="name-signup" />
       </div>
       <div class="form-group">
-        <!--email-->
+        <!-- email -->
         <label for="email-signup">Email:</label>
         <input class="form-input" type="text" id="email-signup" />
       </div>
       <div class="form-group">
-        <!--pw-->
+        <!-- pw, 8 char len minimum -->
         <label for="password-signup">Password:</label>
         <input class="form-input" type="password" id="password-signup" />
       </div>
       <div class="avatar">
 
-        <!--avatar options; 5 in total-->
+        <!-- avatar options; 5 in total -->
         <p class="select-avatar">Select Avatar:</p>
-          <!--avatar 1-->
-         <label>
+        <!-- avatar 1 -->
+        <label>
           <input type="radio" name="avatar1" value="1">
-          <img src="https://i.pinimg.com/280x280_RS/36/b0/6f/36b06fe18cf3cff94fb0febfc009dc3e.jpg"
-            alt="Avatar" class="avatar">
+          <img src="https://i.pinimg.com/280x280_RS/36/b0/6f/36b06fe18cf3cff94fb0febfc009dc3e.jpg" alt="Avatar"
+            class="avatar">
         </label>
-          <!--avatar 2-->
-         <label>
+        <!-- avatar 2 -->
+        <label>
           <input type="radio" name="avatar1" value="2">
           <img src="http://hildes.info/wp-content/uploads/2013/09/avatar_default-56a02492b24667c884f38ecb918666a3.png"
             alt="Avatar" class="avatar">
-
         </label>
-        <!--avatar 3-->
+        <!-- avatar 3 -->
         <label>
-
           <input type="radio" name="avatar1" value="3">
           <img
             src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/21760012/original/d4c0c142f91f012c9a8a9c9aeef3bac28036f15b/create-your-cartoon-style-flat-avatar-or-icon.jpg"
             alt="Avatar" class="avatar">
-
         </label>
-        <!--avatar 4-->
+        <!-- avatar 4 -->
         <label>
-
           <input type="radio" name="avatar1" value="4">
-          <img src="https://i.pinimg.com/736x/14/84/a3/1484a30ef84c389ea83cff2d1eb88eb2.jpg"
-            alt="Avatar" class="avatar">
-
+          <img src="https://i.pinimg.com/736x/14/84/a3/1484a30ef84c389ea83cff2d1eb88eb2.jpg" alt="Avatar"
+            class="avatar">
         </label>
-        <!--avatar 5-->
+        <!-- avatar 5 -->
         <label>
-
           <input type="radio" name="avatar1" value="5">
           <img
             src="https://cdn3.vectorstock.com/i/thumb-large/53/52/afro-girl-listens-to-music-on-headphones-vector-31325352.jpg"
             alt="Avatar" class="avatar">
-
         </label>
       </div>
-      <!--sign up form btn-->
+      <!-- sign up btn -->
       <div class="form-group">
         <button class="btn btn-primary" id="signup-page-btn" type="submit">Sign Up</button>
       </div>

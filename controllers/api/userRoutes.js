@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-// post create new user
+// post creates new user (sign in/log in form events)
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
@@ -19,7 +19,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// post to login the user
+// post to login the user and check their creds (via checkPassword method; 8 chars len minimum)
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
@@ -43,7 +43,7 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-      
+
       res.json({ user: userData, message: 'You are now logged in' });
     });
 
@@ -62,5 +62,6 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
+
 
 module.exports = router;

@@ -1,3 +1,5 @@
+/* styling here only applies to profile hb */
+
 * {
   box-sizing: border-box;
 }
@@ -64,7 +66,6 @@ body {
 #profile-search:hover {
   color:rgb(81, 216, 216)
 }
-
 
 :root {
     --primary: black;
@@ -180,6 +181,8 @@ body {
   .code-card pre:active {
     user-select: all;
   }
+
+  /* designed for PC, tablet, and mobile viewports; 13" PC was used for dev */
   
   @media screen and (min-width: 768px) {
     .card-column {

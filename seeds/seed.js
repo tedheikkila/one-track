@@ -5,6 +5,7 @@ const userData = require('./userData.json');
 const tracksData = require('./tracksData.json');
 const avatarData = require('./avatarData.json');
 
+// seeds user, track, and avatar seed data to MySQL db (onetrack_db)
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
@@ -22,11 +23,12 @@ const seedDatabase = async () => {
   for (const avatar of avatarData) {
     await Avatar.create({
       ...avatar,
-      
+
     });
   }
 
   process.exit(0);
 };
+
 
 seedDatabase();

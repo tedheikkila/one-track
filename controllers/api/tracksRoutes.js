@@ -24,7 +24,7 @@ const spotifyAuth = async () => {
   }
 }
 
-// axios post to get Spotify creds on input and type search
+// axios post to get Spotify creds on input (string input) and type (artist/song) search
 router.post('/', async (req, res) => {
   let token = await spotifyAuth();
 
@@ -38,7 +38,7 @@ router.post('/', async (req, res) => {
   res.json(search.data);
 })
 
-// posts to toptracks on library page
+// posts for artist's toptracks on library page (acts as 2nd api call using artist id from first api call)
 router.post('/toptracks', async (req, res) => {
   let token = await spotifyAuth();
 
@@ -52,7 +52,7 @@ router.post('/toptracks', async (req, res) => {
   res.json(search.data);
 })
 
-// saves track to profile page
+// saves track to profile page; user needs an account/be logged in to save tracks to profile (mw = withAuth)
 router.post('/newtrack', withAuth, async (req, res) => {
   try {
     const trackData = await Track.create({
@@ -66,10 +66,9 @@ router.post('/newtrack', withAuth, async (req, res) => {
     console.log(err);
     res.status(400).json(err);
   }
-
 })
 
-// delete one track by its `id` value
+// delete one track by its `id` value via the delete button at bottom of each saved track (withAuth)
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const trackData = await Track.destroy({

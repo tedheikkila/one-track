@@ -41,7 +41,7 @@ User.init(
         model: 'avatar',
         key: 'id',
       },
-  },
+    },
   },
   {
     hooks: {
@@ -61,5 +61,6 @@ User.init(
     modelName: 'user',
   }
 );
+
 
 module.exports = User;
