@@ -64,9 +64,24 @@ body {
   position: relative;
 }
 
+#one-track-icon {
+  font-size: 55px;
+}
+
 #log-in, #login-page-btn {
   background-color: black;
   width: 100%;
+}
+
+#email-login {
+  margin-bottom: 5%;
+  font-size: 18px;
+  color: black
+}
+
+#password-login {
+  font-size: 18px;
+  color: black
 }
 
 #sign-up {
@@ -112,7 +127,7 @@ body {
 #jumbo-2 {
   background-color: rgb(81, 216, 216);
   position: relative;
-  height: 575px;
+  height: 590px;
   width: 100%;
 }
 
@@ -152,7 +167,7 @@ body {
   border: solid 5px black;
   width: 125%;
   height: 90%;
-  margin-left: -9%;
+  margin-left: -5%;
 }
 
 .mySlides1 {
@@ -260,7 +275,7 @@ body {
 }
 
 .table {
-  margin-left: -12%;
+  margin-left: -5%;
   width: 95%;
 }
 
@@ -383,7 +398,7 @@ tbody {
     margin-right: 10%;
     margin-left: 10%;
   }
-} 
+}  
 
 @media screen and (max-width: 600px) {
   .container {
@@ -424,7 +439,7 @@ tbody {
 
 @media screen and (max-width: 600px) {
   .table {
-    margin-left: -40%;
+    margin-left: -30%;
   }
 } 
 

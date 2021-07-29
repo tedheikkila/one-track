@@ -8,16 +8,16 @@ browse the best songs. develop your own personal music library
   - [Technologies](#technologies)
   - [Deployment](#deployment)
   - [License](#license)
-  - [Questions](#questions)
+  - [Contact](#contact)
   - [Screenshots](#screenshots)
 
    ## Team
 
-  Dev Team #1: Matt R., Mohamed A., Cortland S-B., Ted H.
+  Dev Team: Matt R., Mohamed A., Cortland S-B., Ted H.
   
   ## Description
 
-  This is a PC and mobile app designed for a user who wants to browse a music database and develop a profile page for their favorite songs. It also has the potential in the future to function as a platform for artists to be able to upload their own tracks, album art, and profile information. 
+  This is a PC and mobile app designed for a user who wants to browse a music database and develop a profile page for their favorite songs. It also has the potential in the future to function as a platform for artists to be able to upload their own tracks, album art, and profile info. 
   
   ## Technologies:
 
@@ -33,11 +33,11 @@ browse the best songs. develop your own personal music library
   
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
-  ## Questions
+  ## Contact
 
   * If you have any questions/concerns regarding the app, please contact me on GitHub here (see portfolio app for email): https://github.com/tedheikkila
 
-  * Here's the other collaborator's GitHub usernames as well: m-ray-ofSunshine, CortlandSB, mohamedabukar
+  * Here's the other collaborator's GitHub usernames: m-ray-ofSunshine, CortlandSB, mohamedabukar
 
 ## Screenshots
 
