@@ -27,7 +27,7 @@ browse the best songs. develop your own personal music library
 
   ## Deployment:
 
-  To see the app in action, check out the deployed app on Heroku here >> 
+  To see the app in action, check out the deployed app on Heroku here >> https://arcane-castle-03954.herokuapp.com/ 
 
   ## License
   
