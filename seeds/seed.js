@@ -1,8 +1,9 @@
 const sequelize = require('../config/connection');
-const { User, Track } = require('../models');
+const { User, Track, Avatar } = require('../models');
 
 const userData = require('./userData.json');
 const tracksData = require('./tracksData.json');
+const avatarData = require('./avatarData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -16,6 +17,12 @@ const seedDatabase = async () => {
     await Track.create({
       ...tracks,
       user_id: users[Math.floor(Math.random() * users.length)].id,
+    });
+  }
+  for (const avatar of avatarData) {
+    await Avatar.create({
+      ...avatar,
+      
     });
   }
 

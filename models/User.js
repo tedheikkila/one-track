@@ -35,6 +35,13 @@ User.init(
         len: [8],
       },
     },
+    avatar_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'avatar',
+        key: 'id',
+      },
+  },
   },
   {
     hooks: {

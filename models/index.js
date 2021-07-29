@@ -7,18 +7,18 @@ User.hasMany(Track, {
   onDelete: 'CASCADE'
 });
 
-User.hasOne(Avatar, {
-  foreignKey: 'user_id',
+  User.belongsTo(Avatar, {
+    foreignKey: 'avatar_id',
+    onDelete: 'CASCADE'
+  });
+
+ Track.belongsTo(User, {
+  foreignKey: 'user_id'
+});
+
+Avatar.hasMany(User, {
+  foreignKey: 'avatar_id',
   onDelete: 'CASCADE'
-});
-
-Track.belongsTo(User, {
-  onDelete: 'CASCADE',
-  foreignKey: 'user_id'
-});
-
-Avatar.belongsTo(User, {
-  foreignKey: 'user_id'
 });
 
 module.exports = { User, Track, Avatar };

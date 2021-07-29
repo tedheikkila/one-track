@@ -12,7 +12,7 @@
   <div class="card-column">
     <div id="profile-container">
       <h2 class="profile-name">{{name}}</h2>
-      <img class="profile-pic" src="https://i.pinimg.com/280x280_RS/36/b0/6f/36b06fe18cf3cff94fb0febfc009dc3e.jpg"
+      <img class="profile-pic" src={{avatar.url}}
         width="200" height="200" alt="ProfileImageUpload">
       </img>
     </div>
@@ -28,6 +28,8 @@
 </section>
 
 <main>
+  <section class="row justify-center" id="cardContainer">
+
 
     {{#if tracks.length}}
 
