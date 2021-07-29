@@ -12,7 +12,7 @@ const delButtonHandler = async (event) => {
         if (response.ok) {
           document.location.replace('/profile');
         } else {
-          alert('Failed to delete project');
+          alert('Failed to delete track');
         }
       
     } catch (error) {
@@ -20,15 +20,5 @@ const delButtonHandler = async (event) => {
     }
   
 }
-
-
-
-  
-
-
-
-  
-  
-
 
 $('#cardContainer').on('click', 'button', delButtonHandler)
