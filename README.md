@@ -41,34 +41,42 @@ browse the best songs. develop your own personal music library
 
 ## Screenshots
 
-  * homepage
+  * homepage (top)
 
   ![](./assets/proj2-1.png)
 
-   * placeholder
+   * homepage (bottom w/gallery images)
 
   ![](./assets/proj2-2.png)
 
-   * placeholder
+   * library page (logged out)
 
   ![](./assets/proj2-3.png)
 
-  * placeholder
+  * login & sign up forms 
 
   ![](./assets/proj2-4.png)
 
-  * placeholder
+  * sign up (close-up)
 
   ![](./assets/proj2-5.png)
 
-  * placeholder
+  * new user page
 
   ![](./assets/proj2-6.png)
 
-  * placeholder
+  * library page (logged in)
 
-  ![](./assetss/proj2-7.png)
+  ![](./assets/proj2-7.png)
 
-   * placeholder
+   * saved tracks (profile page)
 
   ![](./assets/proj2-8.png)
+
+  * mobile view (profile page)
+
+  ![](./assets/proj2-9.png)
+
+  * delete a track (profile page)
+
+  ![](./assets/proj2-10.png)
