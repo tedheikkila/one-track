@@ -1,3 +1,4 @@
+
 function storeInput(e) {
   e.preventDefault()
   searchInput = $("#userInput").val()

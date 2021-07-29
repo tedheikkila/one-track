@@ -4,14 +4,14 @@
       <div class="container-1">
         <div style="margin-top: 20px;" class="jumbotron text-center" id="jumbo-1">
           <h1 class="display-4">One Track <span role="img" aria-label="Memo">&#9856;</span></h1>
-          <div class="input">
-            <input type="email" class="form-control" id="email" placeholder="Email" aria-label=""
+          <form class="form login-form" id="log-in-form">
+            <input type="email" class="form-control" id="email-login" placeholder="Email" aria-label=""
               aria-describedby="basic-addon1">
-            <input type="password" class="form-control" id="password" placeholder="Password" aria-label=""
+            <input type="password" class="form-control" id="password-login" placeholder="Password" aria-label=""
               aria-describedby="basic-addon1">
-            <a class="btn btn-primary btn-lg mt-4" href="/" role="button" id="log-in">Log In</a>
-            <a class="btn btn-primary btn-lg mt-4" href="/login" role="button" id="sign-up">Sign Up</a>
-          </div>
+            <button class="btn btn-primary btn-lg mt-4" type="submit" role="button" id="log-in">Log In</button>
+            <button class="btn btn-primary btn-lg mt-4" href="/login" role="button" id="sign-up">Sign Up</button>
+          </form>
         </div>
       </div>
       <div class="container-2">
@@ -22,9 +22,8 @@
               <option value="" disabled selected>Select an option</option>
               <option value="track">Song</option>
               <option value="artist">Artist</option>
-              <option value="album">Album</option>
             </select>
-            <input id="userInput" class="form-input w-100" type="text" placeholder="Royals, Beck, R&B">
+            <input id="userInput" class="form-input w-100" type="text" placeholder="Halo, Eminem">
             <input class="btn btn-info btn-block" type="submit" id="searchBtn" text="Search">
           </form>
         </div>
@@ -41,7 +40,7 @@
       <div class="container-4">
         <div style="margin-top: 20px;" class="jumbotron text-center" id="jumbo-4">
           <div class="slideshow-container">
-            <!-- Full-width images with number and caption text -->
+            <!-- Full-width images -->
             <div class="mySlides1">
               <img id="home-images"
                 src="https://cdn.allfamous.org/people/avatars/jack-harlow-licu-allfamous.org.jpg?v=43" width=200;
@@ -70,3 +69,5 @@
 </footer>
 
 <script src="/js/homepage.js"></script>
+<script src="/js/login.js"></script>
+<script src="/js/logout.js"></script>

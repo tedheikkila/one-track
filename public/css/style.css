@@ -62,7 +62,7 @@ body {
   position: relative;
 }
 
-#log-in {
+#log-in, #login-page-btn {
   background-color: black;
   width: 100%;
 }
@@ -73,7 +73,7 @@ body {
   font-size: 15px
 }
 
-#log-in:hover {
+#log-in:hover, #login-page-btn:hover {
   color: rgb(238, 113, 227)
 }
 
@@ -97,19 +97,19 @@ body {
 }
 
 #search-form-tracks {
-  margin-top: 5%;
+  margin-top: 10%;
   margin-left: 5%;
   width: 90%;
   font-size: 20px;
 }
 
-#submit-search {
+#searchBtn {
   background-color: black;
   font-size: 20px;
   border: none
 }
 
-#submit-search:hover {
+#searchBtn:hover {
   color:rgb(81, 216, 216)
 }
 
@@ -194,7 +194,7 @@ body {
 }
 
 .list-container .card {
-  height: calc(100vh - 70px);
+  height: calc(300vh - 70px);
   border-bottom: none;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
@@ -236,9 +236,10 @@ body {
 }
 
 .table {
-  margin-left: -16%;
-  width: 118%;
+  margin-left: -12%;
+  width: 95%;
 }
+
 
 tbody {
   font-size: 15px;
@@ -286,6 +287,70 @@ tbody {
   color: rgb(238, 113, 227)
 }
 
+/* signup/login avatar */
+
+.avatar {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+
+.select-avatar {
+  display: inline;
+  margin-right: 30%;
+}
+
+[type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+[type=radio] + img {
+  cursor: pointer;
+}
+[type=radio]:checked + img {
+  outline: 5px solid black;
+}
+
+#login-signup-row {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+}
+
+#signup-page-btn {
+  width: 100%;
+  background-color: black;
+  font-size: 20px;
+}
+
+#signup-page-btn:hover {
+  color:rgb(81, 216, 216)
+}
+
+#login-page-btn {
+  font-size: 20px;
+  margin-top: 5%;
+}
+
+#log-in-form {
+  background-color: rgb(238, 113, 227);
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 5%;
+}
+
+#sign-up-form {
+  background-color: rgb(81, 216, 216);
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 5%;
+}
+
 @media screen and (max-width: 1000px) {
   .container {
     margin-right: 10%;
@@ -326,36 +391,26 @@ tbody {
 
 @media screen and (max-width: 600px) {
   .list-container .card {
-    display: none;
+    display: none
   }
 } 
 
 @media screen and (max-width: 600px) {
   .table {
-    margin-left: -60%;
+    margin-left: -40%;
   }
 } 
 
-.avatar {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-.avatar p {
-  display: inline;
-}
-[type=radio] { 
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-[type=radio] + img {
-  cursor: pointer;
-}
-[type=radio]:checked + img {
-  outline: 2px solid #f00;
-}
+@media screen and (max-width: 600px) {
+  #album-head, #album-data {
+    display: none;
+  }
+} 
+
+@media screen and (max-width: 600px) {
+  #audio-file {
+    width: 100%;
+  }
+} 
 
 

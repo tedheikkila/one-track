@@ -18,19 +18,24 @@
     </div>
   </div>
   <div class="card-column">
-    <h2 class="profile-name"># of Songs</h2>
+    <h2 class="profile-name">
+      {{#if tracks.length}}
+      {{tracks.length}} Song(s)
+      {{else}} Browse Library to Add Songs
+      {{/if}}
+      </h2>
   </div>
 </section>
 
 <main>
   <section class="row justify-center" id="cardContainer">
-   
+
 
     {{#if tracks.length}}
 
-
-{{#each tracks as |track|}}
-
+    {{#each tracks as |track|}}
+  <section class="row justify-center" id="cardContainer">
+   
 <div class="card-column">
   <figure class="card code-card" id="card-figure">
     <h2 class="card-header">{{track.title}}</h2>
@@ -46,13 +51,13 @@
     <button type="button" class="btn btn-info" data_id="{{track.id}}" id="delete-track">Delete</button>
   </figure>
 </div>
+
 {{/each}}
 
 {{/if}}
+
   </section>
 </main>
 
 
 <script src="./js/profile.js"></script>
-
-
