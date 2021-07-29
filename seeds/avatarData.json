@@ -1,22 +1,22 @@
 [
     {
       "name": "person1",
-      "filename": "avatar1.jpg"
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2csVHl_EBoGPADSH-4tF2g6NFnhWKDp72MA&usqp=CAU"
     },
     {
       "name": "person2",
-      "filename": "avatar2.jpg"
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFvJrJW5XuQ3q0M0azDbXEO3pv0-AM9w3Qhw&usqp=CAU"
     },
     {
       "name": "person3",
-      "filename": "avatar3.jpg"
-    },
+      "url": "https://i.pinimg.com/736x/2e/76/d8/2e76d88411e7c159e114984b36627b4e.jpg"
+     },
     {
       "name": "person4",
-      "filename": "avatar4.jpg"
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7YhP4HnefYhoFHR4AZ-QXvstSMgjniE8LYw&usqp=CAU"
     },
     {
       "name": "person5",
-      "filename": "avatar5.jpg"
+      "url": "https://numpaint.com/wp-content/uploads/2020/08/Meliodas-Seven-Deadly-Sins.jpg"
     }
   ]
