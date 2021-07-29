@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const { Track, User } = require('../models');
+const { Track, User, Avatar } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    // Get all tracks and JOIN with user data
+    // Get all tracks and JOIN with user dataS
     const trackData = await Track.findAll({
       include: [
         {
@@ -80,7 +80,7 @@ router.get('/profile', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Track }],
+      include: [{ model: Track },{model: Avatar}],
     });
 
     const user = userData.get({ plain: true });
