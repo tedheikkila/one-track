@@ -5,7 +5,7 @@ const homeRoutes = require('./homeRoutes');
 const tracksRoutes = require('./tracksRoutes');
 
 router.use('/', homeRoutes);
-router.use('/api', apiRoutes);
 router.use('/tracks', tracksRoutes);
+router.use('/api', apiRoutes);
 
 module.exports = router;
