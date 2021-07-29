@@ -1,7 +1,8 @@
+<!--row encapsulates login & signup for styling-->
 <div class="row" id="login-signup-row">
+  <!--login form-->
   <div class="col-md-6">
     <h2>Log In</h2>
-
     <form class="form login-form" id="log-in-form">
       <div class="form-group">
         <label for="email-login">Email:</label>
@@ -17,46 +18,70 @@
     </form>
   </div>
 
+  <!--signup form-->
   <div class="col-md-6">
     <h2>Sign Up</h2>
     <form class="form signup-form" id="sign-up-form">
       <div class="form-group">
+        <!--name-->
         <label for="name-signup">Name:</label>
         <input class="form-input" type="text" id="name-signup" />
       </div>
       <div class="form-group">
+        <!--email-->
         <label for="email-signup">Email:</label>
         <input class="form-input" type="text" id="email-signup" />
       </div>
       <div class="form-group">
+        <!--pw-->
         <label for="password-signup">Password:</label>
         <input class="form-input" type="password" id="password-signup" />
       </div>
       <div class="avatar">
-        <p>Select Avatar</p>
-        <label>
-          <input type="radio" name="avatar1" value="1">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2csVHl_EBoGPADSH-4tF2g6NFnhWKDp72MA&usqp=CAU" width="300" height="300" alt="Avatar" class="avatar">
+
+        <!--avatar options; 5 in total-->
+        <p class="select-avatar">Select Avatar:</p>
+          <!--avatar 1-->
+         <label>
+          <input type="radio" name="avatar1" value="avatar-1">
+          <img src="https://i.pinimg.com/280x280_RS/36/b0/6f/36b06fe18cf3cff94fb0febfc009dc3e.jpg"
+            alt="Avatar" class="avatar">
         </label>
-        <label>
-          <input type="radio" name="avatar1" value="2">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFvJrJW5XuQ3q0M0azDbXEO3pv0-AM9w3Qhw&usqp=CAU" alt="Avatar" class="avatar">
+          <!--avatar 2-->
+         <label>
+          <input type="radio" name="avatar1" value="avatar-2">
+          <img src="http://hildes.info/wp-content/uploads/2013/09/avatar_default-56a02492b24667c884f38ecb918666a3.png"
+            alt="Avatar" class="avatar">
+
         </label>
+        <!--avatar 3-->
         <label>
-          <input type="radio" name="avatar1" value="3">
-          <img src="https://i.pinimg.com/736x/2e/76/d8/2e76d88411e7c159e114984b36627b4e.jpg" alt="Avatar" class="avatar">
+
+          <input type="radio" name="avatar1" value="avatar-3">
+          <img
+            src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/21760012/original/d4c0c142f91f012c9a8a9c9aeef3bac28036f15b/create-your-cartoon-style-flat-avatar-or-icon.jpg"
+            alt="Avatar" class="avatar">
+
         </label>
+        <!--avatar 4-->
         <label>
-          <input type="radio" name="avatar1" value="4">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7YhP4HnefYhoFHR4AZ-QXvstSMgjniE8LYw&usqp=CAU" alt="Avatar" class="avatar">
+
+          <input type="radio" name="avatar1" value="avatar-4">
+          <img src="https://i.pinimg.com/736x/14/84/a3/1484a30ef84c389ea83cff2d1eb88eb2.jpg"
+            alt="Avatar" class="avatar">
+
         </label>
+        <!--avatar 5-->
         <label>
-          <input type="radio" name="avatar1" value="5">
-          <img src="https://numpaint.com/wp-content/uploads/2020/08/Meliodas-Seven-Deadly-Sins.jpg" alt="Avatar" class="avatar">
+
+          <input type="radio" name="avatar1" value="avatar-5">
+          <img
+            src="https://cdn3.vectorstock.com/i/thumb-large/53/52/afro-girl-listens-to-music-on-headphones-vector-31325352.jpg"
+            alt="Avatar" class="avatar">
 
         </label>
       </div>
-
+      <!--sign up form btn-->
       <div class="form-group">
         <button class="btn btn-primary" id="signup-page-btn" type="submit">Sign Up</button>
       </div>

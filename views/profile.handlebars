@@ -21,43 +21,44 @@
     <h2 class="profile-name">
       {{#if tracks.length}}
       {{tracks.length}} Song(s)
-      {{else}} Browse Library to Add Songs
+      <br>
+      <a class="btn btn-primary btn-lg mt-4" href="/tracks" role="button" id="browse-library">Browse Library</a>
+      {{else}} 
+      <a class="btn btn-primary btn-lg mt-4" href="/tracks" role="button" id="browse-library">Start Browsing</a>
       {{/if}}
-      </h2>
+    </h2>
   </div>
 </section>
 
 <main>
+
   <section class="row justify-center" id="cardContainer">
 
 
-    {{#if tracks.length}}
 
-    {{#each tracks as |track|}}
-  <section class="row justify-center" id="cardContainer">
-   
-<div class="card-column">
-  <figure class="card code-card" id="card-figure">
-    <h2 class="card-header">{{track.title}}</h2>
-    <div class="card-body">
-      <img id="album" src="{{track.album_image}}" width="200"
-        height="200"></img>
-        
-      <p id="artist">{{track.artist}}</p>
-      <audio controls id="audio">
-        <source src={{track.url}} type="audio/mpeg">
-      </audio>
+
+  {{#if tracks.length}}
+
+  {{#each tracks as |track|}}
+
+    <div class="card-column">
+      <figure class="card code-card" id="card-figure">
+        <h2 class="card-header">{{track.title}}</h2>
+        <div class="card-body">
+          <img id="album" src="{{track.album_image}}" width="200" height="200"></img>
+          <p id="artist">{{track.artist}}</p>
+          <audio controls id="audio">
+            <source src={{track.url}} type="audio/mpeg">
+          </audio>
+        </div>
+        <button type="button" class="btn btn-info" data_id="{{track.id}}" id="delete-track">Delete</button>
+      </figure>
     </div>
-    <button type="button" class="btn btn-info" data_id="{{track.id}}" id="delete-track">Delete</button>
-  </figure>
-</div>
 
-{{/each}}
-
-{{/if}}
-
+    {{/each}}
+    
+    {{/if}}
   </section>
 </main>
-
 
 <script src="./js/profile.js"></script>

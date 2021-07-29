@@ -73,6 +73,28 @@ body {
   font-size: 15px
 }
 
+#browse-library {
+  background-color: black;
+  width: 50%;
+  font-size: 15px;
+}
+
+#browse-library:hover {
+  color: rgb(238, 113, 227)
+}
+
+#sign-up-tracks {
+  background-color: black;
+  width: 80%;
+  font-size: 15px;
+  margin-left: 10%;
+  text-align: center;
+}
+
+#sign-up-tracks:hover {
+  color: rgb(238, 113, 227)
+}
+
 #log-in:hover, #login-page-btn:hover {
   color: rgb(238, 113, 227)
 }
@@ -88,7 +110,7 @@ body {
 #jumbo-2 {
   background-color: rgb(81, 216, 216);
   position: relative;
-  height: 515px;
+  height: 575px;
   width: 100%;
 }
 

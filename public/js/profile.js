@@ -1,26 +1,24 @@
 
+
+// delete buttons remove card from profile
 const delButtonHandler = async (event) => {
-  
   try {
-  console.log(event);
-  if (event.target.attributes[2].value) {
-    const id = event.target.attributes[2].value;;
-
-    const response = await fetch(`/api/tracks/${id}`, {
-      method: 'DELETE',
-    });
-
-    if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      alert('Failed to delete project');
-    }
+        const id = event.target.attributes[2].value;;
     
-  } catch (error) {
-    console.log(error)
-  }
+        const response = await fetch(`/api/tracks/${id}`, {
+          method: 'DELETE',
+        });
+    
+        if (response.ok) {
+          document.location.replace('/profile');
+        } else {
+          alert('Failed to delete track');
+        }
+      
+    } catch (error) {
+      console.log(error)
+    }
   
-};
+}
 
-
-  $('#cardContainer').on('click','button', delButtonHandler)
+$('#cardContainer').on('click', 'button', delButtonHandler)

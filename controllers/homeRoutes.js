@@ -52,28 +52,6 @@ router.get('/tracks', async (req, res) => {
   }
 });
 
-router.get('/track/:id', async (req, res) => {
-  try {
-    const blogData = await Blog.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
-
-    const track = trackData.get({ plain: true });
-
-    res.render('track', {
-      ...track,
-      logged_in: req.session.logged_in
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
   try {
