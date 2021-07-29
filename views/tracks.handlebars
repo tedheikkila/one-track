@@ -9,21 +9,23 @@
                         <option value="artist">Artist</option>
                     </select>
                     <input id="userInput" class="form-input w-100" type="text" placeholder="Africa, A$AP Rocky">
-                   <input class="btn btn-info btn-block" type="submit" id="searchBtn" text="Search">
+                    <input class="btn btn-info btn-block" type="submit" id="searchBtn" text="Search">
                 </form>
-                <ul class="list-group">
-                    <!-- Saved tracks get appended here -->
-                </ul>
+                {{#if logged_in}}
+                <a class="btn btn-primary btn-lg mt-4" href="/profile" role="button" id="sign-up-tracks">View saved tracks</a>
+                {{else}}
+                <a class="btn btn-primary btn-lg mt-4" href="/login" role="button" id="sign-up-tracks">Log in to save tracks</a>
+                {{/if}}
             </div>
         </div>
         <div class="col-8">
             <!-- Table from Spotify api call goes here -->
             <table class="table table-striped table-hover table-bordered">
                 <thead id="thead" class="library-thead">
-                   
+
                 </thead>
                 <tbody id="tbody">
-                    
+
                 </tbody>
             </table>
         </div>

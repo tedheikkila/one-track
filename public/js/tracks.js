@@ -21,7 +21,7 @@ const renderTracks = (trackArr) => {
   <tr>
   <th>Name</th>
   <th>Artist</th>
-  <th>Album</th>
+  <th id="album-head">Album</th>
   <th>Play</th>
   <th>Save</th>
 </tr>
@@ -32,8 +32,8 @@ const renderTracks = (trackArr) => {
     let rowData = `
   <th scope="row" class="track-title">${track.name}</th>
                     <td>${track.artists[0].name}</td>
-                    <td>${track.album.name}<img src=${track.album.images[1].url} alt="${track.album.name} cover image" style="display: none" width="1" height="1" /> </td>
-                    <td><button id="play-one-btn">&#9836;<audio controls>
+                    <td id="album-data">${track.album.name}<img src=${track.album.images[1].url} alt="${track.album.name} cover image" style="display: none" width="1" height="1" /> </td>
+                    <td><button id="play-one-btn">&#9836;<audio controls id="audio-file">
                     <source src="${track.preview_url}" type="audio/mp3">
                   </audio></button></td>
                     <td><button id="plus-one-btn">+1</button></td>

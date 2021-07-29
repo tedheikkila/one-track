@@ -21,7 +21,10 @@
     <h2 class="profile-name">
       {{#if tracks.length}}
       {{tracks.length}} Song(s)
-      {{else}} Browse Library to Add Songs
+      <br>
+      <a class="btn btn-primary btn-lg mt-4" href="/tracks" role="button" id="browse-library">Browse Library</a>
+      {{else}} 
+      <a class="btn btn-primary btn-lg mt-4" href="/tracks" role="button" id="browse-library">Start Browsing</a>
       {{/if}}
     </h2>
   </div>
