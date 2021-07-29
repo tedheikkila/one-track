@@ -3,6 +3,11 @@ const { User } = require('../models');
 const withAuth = require('../utils/auth');
 
 
+router.get('/', (req, res) => {
+  res.render('homepage');
+});
+
+
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
   try {
