@@ -60,8 +60,14 @@ body {
 }
 
 #jumbo-1 {
-  background-color: rgb(238, 113, 227);
+  background-color: black;
   position: relative;
+  color:rgb(238, 113, 227);
+  border: solid 5px white;
+}
+
+.display-4 {
+  margin-top: -40px
 }
 
 #one-track-icon {
@@ -125,14 +131,25 @@ body {
 }
 
 #jumbo-2 {
-  background-color: rgb(81, 216, 216);
+  background-color: black;
   position: relative;
-  height: 590px;
-  width: 100%;
+  width: 85%;
+  color: rgb(81, 216, 216);
+  height: 530px;
+  border: solid 5px white;
+}
+
+#search-icon {
+  font-size: 70px;
 }
 
 #search-form {
-  margin-top: 75px;
+  margin-top: 30px;
+  font-size: 20px;
+  padding: 30px;
+  background-color: rgb(81, 216, 216);
+  border-radius: 10px;
+  margin-bottom: -20px;
 }
 
 #search-form-tracks {
@@ -162,9 +179,9 @@ body {
 }
 
 #jumbo-4 {
-  background-color: white;
+  background-color: black;
   position: relative;
-  border: solid 5px black;
+  border: solid 5px white;
   width: 125%;
   height: 90%;
   margin-left: -5%;
@@ -382,6 +399,7 @@ tbody {
   padding: 30px;
   border-radius: 10px;
   margin-top: 5%;
+  margin-bottom: -20px
 }
 
 #sign-up-form {
